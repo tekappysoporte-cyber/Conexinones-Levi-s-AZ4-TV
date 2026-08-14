@@ -1,150 +1,3362 @@
-[
+
+Conversación con Gemini
+MANDAME ESTO EN FORMATO JSON POR FAVOR
+
   { "Controlador": "00", "StoreNo": "37", "Tienda": "Levis Arauco Maipu", "Conexion": "PCLO4000011101O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "37", "Tienda": "Levis Arauco Maipu", "Conexion": "PCLO4000011102O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "53", "Tienda": "Levis Patio/Vivo/Outlet Maipu", "Conexion": "PCLO4000010401O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "53", "Tienda": "Levis Patio/Vivo/Outlet Maipu", "Conexion": "PCLO4000010402O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "15", "Tienda": "Levis Portal La Dehesa", "Conexion": "PCLO4000013101O", "Caja": "MAIN" },
-  { "Controlador": "", "StoreNo": "15", "Tienda": "Levis Portal La Dehesa", "Conexion": "PCLO4000013102O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "15", "Tienda": "Levis Portal La Dehesa", "Conexion": "PCLO4000013103O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "23", "Tienda": "Levis Plaza Norte", "Conexion": "PCLO4000010901O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "23", "Tienda": "Levis Plaza Norte", "Conexion": "PCLO4000010902O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "25", "Tienda": "Levi's Plaza Egaña", "Conexion": "PCLO4000013201O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "25", "Tienda": "Levi's Plaza Egaña", "Conexion": "PCLO4000013202O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "25", "Tienda": "Levi's Plaza Egaña", "Conexion": "PCLO4000013203O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "43", "Tienda": "Levis Estacion Central", "Conexion": "PCLO4000014001O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "43", "Tienda": "Levis Estacion Central", "Conexion": "PCLO4000014002O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "77", "Tienda": "Levis Galeria Imperio", "Conexion": "PCLO4000014701O", "Caja": "MAIN" },
-  { "Controlador": "", "StoreNo": "77", "Tienda": "Levis Galeria Imperio", "Conexion": "PCLO4000014702O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "77", "Tienda": "Levis Galeria Imperio", "Conexion": "PCLO4000014703O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "14", "Tienda": "Levis Florida center", "Conexion": "PCLO4000012701O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "14", "Tienda": "Levis Florida center", "Conexion": "PCLO4000012702O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "14", "Tienda": "Levis Florida center", "Conexion": "PCLO4000012703O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "36", "Tienda": "Levis Portal Ñuñoa", "Conexion": "PCLO4000012901O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "36", "Tienda": "Levis Portal Ñuñoa", "Conexion": "PCLO4000012902O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "36", "Tienda": "Levis Portal Ñuñoa", "Conexion": "PCLO4000012903O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "33", "Tienda": "Levis Los Dominicos", "Conexion": "PCLO4000013501O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "33", "Tienda": "Levis Los Dominicos", "Conexion": "PCLO4000013502O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "33", "Tienda": "Levis Los Dominicos", "Conexion": "PCLO4000013503O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "85", "Tienda": "Levis Viña Espacio Urbano", "Conexion": "PCLO4000014801O", "Caja": "Main" },
-  { "Controlador": "", "StoreNo": "85", "Tienda": "Levis Viña Espacio Urbano", "Conexion": "PCLO4000014802O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "85", "Tienda": "Levis Viña Espacio Urbano", "Conexion": "PCLO4000014803O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "85", "Tienda": "Levis Viña Espacio Urbano", "Conexion": "PCLO4000014804O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "2", "Tienda": "Levis Plaza Oeste", "Conexion": "PCLO4000012601O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "2", "Tienda": "Levis Plaza Oeste", "Conexion": "PCLO4000012602O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "2", "Tienda": "Levis Plaza Oeste", "Conexion": "PCLO4000012603O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "2", "Tienda": "Levis Plaza Oeste", "Conexion": "PCLO4000012604O", "Caja": "C4" },
-  { "Controlador": "", "StoreNo": "34", "Tienda": "Levis Plaza Vespucio", "Conexion": "PCLO4000013301O", "Caja": "MAIN" },
-  { "Controlador": "", "StoreNo": "34", "Tienda": "Levis Plaza Vespucio", "Conexion": "PCLO4000013302O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "34", "Tienda": "Levis Plaza Vespucio", "Conexion": "PCLO4000013303O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "34", "Tienda": "Levis Plaza Vespucio", "Conexion": "PCLO4000013304O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "34", "Tienda": "Levis Plaza Vespucio", "Conexion": "PCLO4000013305O", "Caja": "C4" },
-  { "Controlador": "", "StoreNo": "86", "Tienda": "Levis Barrio Independencia", "Conexion": "PCLO4000014901O", "Caja": "MAIN" },
-  { "Controlador": "", "StoreNo": "86", "Tienda": "Levis Barrio Independencia", "Conexion": "PCLO4000014902O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "86", "Tienda": "Levis Barrio Independencia", "Conexion": "PCLO4000014903O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "86", "Tienda": "Levis Barrio Independencia", "Conexion": "PCLO4000014904O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "81", "Tienda": "Levis Plaza Sur", "Conexion": "PCLO4000014301O", "Caja": "MAIN" },
-  { "Controlador": "", "StoreNo": "81", "Tienda": "Levis Plaza Sur", "Conexion": "PCLO4000014302O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "81", "Tienda": "Levis Plaza Sur", "Conexion": "PCLO4000014303O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "81", "Tienda": "Levis Plaza Sur", "Conexion": "PCLO4000014304O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "81", "Tienda": "Levis Plaza Sur", "Conexion": "PCLO4000014305O", "Caja": "C4" },
-  { "Controlador": "", "StoreNo": "38", "Tienda": "Levis Factory", "Conexion": "PCLO4000019001O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "38", "Tienda": "Levis Factory", "Conexion": "PCLO4000019002O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "38", "Tienda": "Levis Factory", "Conexion": "PCLO4000019003O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "38", "Tienda": "Levis Factory", "Conexion": "PCLO4000019004O", "Caja": "C4" },
-  { "Controlador": "", "StoreNo": "11", "Tienda": "Levis Osorno", "Conexion": "PCLO4000011301O", "Caja": "MAIN" },
-  { "Controlador": "", "StoreNo": "11", "Tienda": "Levis Osorno", "Conexion": "PCLO4000011302O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "11", "Tienda": "Levis Osorno", "Conexion": "PCLO4000011303O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "88", "Tienda": "Levis Gran Costanera", "Conexion": "PCLO4000014401O", "Caja": "MAIN" },
-  { "Controlador": "", "StoreNo": "88", "Tienda": "Levis Gran Costanera", "Conexion": "PCLO4000014402O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "88", "Tienda": "Levis Gran Costanera", "Conexion": "PCLO4000014403O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "17", "Tienda": "Levis Alto Las Condes", "Conexion": "PCLO4000010701O", "Caja": "MAIN" },
-  { "Controlador": "", "StoreNo": "17", "Tienda": "Levis Alto Las Condes", "Conexion": "PCLO4000010702O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "17", "Tienda": "Levis Alto Las Condes", "Conexion": "PCLO4000010703O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "17", "Tienda": "Levis Alto Las Condes", "Conexion": "PCLO4000010704O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "44", "Tienda": "Levis Outlet Huechuraba", "Conexion": "PCLO4000017101O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "44", "Tienda": "Levis Outlet Huechuraba", "Conexion": "PCLO4000017102O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "44", "Tienda": "Levis Outlet Huechuraba", "Conexion": "PCLO4000017103O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "18", "Tienda": "Levis Parque Arauco", "Conexion": "PCLO4000017401O", "Caja": "MAIN" },
-  { "Controlador": "", "StoreNo": "18", "Tienda": "Levis Parque Arauco", "Conexion": "PCLO4000017402O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "18", "Tienda": "Levis Parque Arauco", "Conexion": "PCLO4000017403O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "18", "Tienda": "Levis Parque Arauco", "Conexion": "PCLO4000017404O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "18", "Tienda": "Levis Parque Arauco", "Conexion": "PCLO4000017405O", "Caja": "C4" },
-  { "Controlador": "", "StoreNo": "18", "Tienda": "Levis Parque Arauco", "Conexion": "PCLO4000017406O", "Caja": "SH 1" },
-  { "Controlador": "", "StoreNo": "5", "Tienda": "Levis Costanera Center", "Conexion": "PCLO4000010801O", "Caja": "MAIN" },
-  { "Controlador": "", "StoreNo": "5", "Tienda": "Levis Costanera Center", "Conexion": "PCLO4000010802O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "5", "Tienda": "Levis Costanera Center", "Conexion": "PCLO4000010803O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "5", "Tienda": "Levis Costanera Center", "Conexion": "PCLO4000010804O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "5", "Tienda": "Levis Costanera Center", "Conexion": "PCLO4000010805O", "Caja": "C4" },
-  { "Controlador": "", "StoreNo": "5", "Tienda": "Levis Costanera Center", "Conexion": "PCLO4000010806O", "Caja": "SH H1" },
-  { "Controlador": "", "StoreNo": "5", "Tienda": "Levis Costanera Center", "Conexion": "PCLO4000010807O", "Caja": "SH H2" },
-  { "Controlador": "", "StoreNo": "47", "Tienda": "Levis Marina Arauco", "Conexion": "PCLO4000017801O", "Caja": "MAIN" },
-  { "Controlador": "", "StoreNo": "47", "Tienda": "Levis Marina Arauco", "Conexion": "PCLO4000017802O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "47", "Tienda": "Levis Marina Arauco", "Conexion": "PCLO4000017803O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "47", "Tienda": "Levis Marina Arauco", "Conexion": "PCLO4000017804O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "47", "Tienda": "Levis Marina Arauco", "Conexion": "PCLO4000017805O", "Caja": "C4" },
-  { "Controlador": "", "StoreNo": "18", "Tienda": "Levis Mall plaza Lira Hans Valdivia (Tailory Valdivia)", "Conexion": "PCLO4000017001O", "Caja": "MAIN" },
-  { "Controlador": "", "StoreNo": "18", "Tienda": "Levis Mall plaza Lira Hans Valdivia (Tailory Valdivia)", "Conexion": "PCLO4000017002O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "18", "Tienda": "Levis Mall plaza Lira Hans Valdivia (Tailory Valdivia)", "Conexion": "PCLO4000017003O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "18", "Tienda": "Levis Mall plaza Lira Hans Valdivia (Tailory Valdivia)", "Conexion": "PCLO4000017004O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "87", "Tienda": "Levis Mall Outlet Rancagua", "Conexion": "PCLO4000015001O", "Caja": "MAIN" },
-  { "Controlador": "", "StoreNo": "87", "Tienda": "Levis Mall Outlet Rancagua", "Conexion": "PCLO4000015002O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "87", "Tienda": "Levis Mall Outlet Rancagua", "Conexion": "PCLO4000015003O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "87", "Tienda": "Levis Mall Outlet Rancagua", "Conexion": "PCLO4000015004O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "57", "Tienda": "Outlet Levis Peña Peñablanca", "Conexion": "PCLO4000010301O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "57", "Tienda": "Outlet Levis Peña Peñablanca", "Conexion": "PCLO4000010302O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "9", "Tienda": "Levis La Serena", "Conexion": "PCLO4000017301O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "9", "Tienda": "Levis La Serena", "Conexion": "PCLO4000017302O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "27", "Tienda": "Levis/Dockers San Antonio", "Conexion": "PCLO4000011001O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "40", "Tienda": "Levis Curauma", "Conexion": "PCLO4000011601O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "40", "Tienda": "Levis Curauma", "Conexion": "PCLO4000011602O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "55", "Tienda": "Outlet Levis Paseo La Florida", "Conexion": "PCLO4000010101O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "55", "Tienda": "Outlet Levis Paseo La Florida", "Conexion": "PCLO4000010102O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "55", "Tienda": "Outlet Levis Paseo La Florida", "Conexion": "PCLO4000010103O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "68", "Tienda": "Outlet Levis Mall Plaza Calama", "Conexion": "PCLO4000013901O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "68", "Tienda": "Outlet Levis Mall Plaza Calama", "Conexion": "PCLO4000013902O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "68", "Tienda": "Outlet Levis Mall Plaza Calama", "Conexion": "PCLO4000013903O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "78", "Tienda": "Levis Plaza Copiapo", "Conexion": "PCLO4000011401O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "84", "Tienda": "Levis Iquique", "Conexion": "PCLO4000014501O", "Caja": "MAIN" },
-  { "Controlador": "", "StoreNo": "84", "Tienda": "Levis Iquique", "Conexion": "PCLO4000014502O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "84", "Tienda": "Levis Iquique", "Conexion": "PCLO4000014503O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "84", "Tienda": "Levis Iquique", "Conexion": "PCLO4000014504O", "Caja": "C3" },
-  { "Controlador": "", "StoreNo": "19", "Tienda": "Levis mall Tobalaba", "Conexion": "PCLO4000010601O", "Caja": "MAIN" },
-  { "Controlador": "", "StoreNo": "19", "Tienda": "Levis mall Tobalaba", "Conexion": "PCLO4000010602O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "19", "Tienda": "Levis mall Tobalaba", "Conexion": "PCLO4000010603O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "19", "Tienda": "Levis mall Tobalaba", "Conexion": "PCLO4000010604O", "Caja": "C3" },
-  { "Controlador": "LV_RANCAGUA", "StoreNo": "47", "Tienda": "Outlet Levis Rancagua", "Conexion": "PCLO4000010201O", "Caja": "C1" },
-  { "Controlador": "LV_RANCAGUA", "StoreNo": "47", "Tienda": "Outlet Levis Rancagua", "Conexion": "PCLO4000010202O", "Caja": "C2" },
-  { "Controlador": "LV_CURICO", "StoreNo": "48", "Tienda": "Levis Curico", "Conexion": "PCLO4000013601O", "Caja": "C1" },
-  { "Controlador": "LV_CURICO", "StoreNo": "48", "Tienda": "Levis Curico", "Conexion": "PCLO4000013602O", "Caja": "C2" },
-  { "Controlador": "LV_MAULETALCA", "StoreNo": "33", "Tienda": "Levis Mall Plaza Maule Talca", "Conexion": "PCLO4000011901O", "Caja": "C1" },
-  { "Controlador": "LV_MAULETALCA", "StoreNo": "33", "Tienda": "Levis Mall Plaza Maule Talca", "Conexion": "PCLO4000011902O", "Caja": "C2" },
-  { "Controlador": "LV_MAULETALCA", "StoreNo": "33", "Tienda": "Levis Mall Plaza Maule Talca", "Conexion": "PCLO4000011903O", "Caja": "C3" },
-  { "Controlador": "LV_TALCAGDFLOR", "StoreNo": "67", "Tienda": "Outlet Levis Talca Gd Florida", "Conexion": "PCLO4000014201O", "Caja": "C1" },
-  { "Controlador": "LV_TALCAGDFLOR", "StoreNo": "67", "Tienda": "Outlet Levis Talca Gd Florida", "Conexion": "PCLO4000014202O", "Caja": "C2" },
-  { "Controlador": "LV_TALCAGDFLOR", "StoreNo": "67", "Tienda": "Outlet Levis Talca Gd Florida", "Conexion": "PCLO4000014203O", "Caja": "C3" },
-  { "Controlador": "LV_TALCAGDFLOR", "StoreNo": "67", "Tienda": "Outlet Levis Talca Gd Florida", "Conexion": "PCLO4000014204O", "Caja": "C4" },
-  { "Controlador": "LV_ARAUCHILLAN", "StoreNo": "35", "Tienda": "Levis Arauco Chillan", "Conexion": "PCLO4000011801O", "Caja": "C1" },
-  { "Controlador": "LV_ARAUCHILLAN", "StoreNo": "35", "Tienda": "Levis Arauco Chillan", "Conexion": "PCLO4000011802O", "Caja": "C2" },
-  { "Controlador": "LV_VCHILLAN", "StoreNo": "60", "Tienda": "Levis Vivo Chillan", "Conexion": "PCLO4000010801O", "Caja": "C1" },
-  { "Controlador": "LV_VCHILLAN", "StoreNo": "60", "Tienda": "Levis Vivo Chillan", "Conexion": "PCLO4000010802O", "Caja": "C2" },
-  { "Controlador": "LV_VCHILLAN", "StoreNo": "60", "Tienda": "Levis Vivo Chillan", "Conexion": "PCLO4000010803O", "Caja": "C3" },
-  { "Controlador": "LV_VCHILLAN", "StoreNo": "60", "Tienda": "Levis Vivo Chillan", "Conexion": "PCLO4000010804O", "Caja": "C4" },
-  { "Controlador": "LV_BIOBIO", "StoreNo": "73", "Tienda": "Levis BioBio", "Conexion": "PCLO4000014601O", "Caja": "C1" },
-  { "Controlador": "LV_BIOBIO", "StoreNo": "73", "Tienda": "Levis BioBio", "Conexion": "PCLO4000014602O", "Caja": "C2" },
-  { "Controlador": "LV_BIOBIO", "StoreNo": "73", "Tienda": "Levis BioBio", "Conexion": "PCLO4000014603O", "Caja": "C3" },
-  { "Controlador": "LV_BIOBIO", "StoreNo": "73", "Tienda": "Levis BioBio", "Conexion": "PCLO4000014604O", "Caja": "C4" },
-  { "Controlador": "LV_TREBOL", "StoreNo": "8", "Tienda": "Levis Plaza El Trebol", "Conexion": "PCLO4000012201O", "Caja": "C1" },
-  { "Controlador": "LV_TREBOL", "StoreNo": "8", "Tienda": "Levis Plaza El Trebol", "Conexion": "PCLO4000012202O", "Caja": "C2" },
-  { "Controlador": "LV_TREBOL", "StoreNo": "8", "Tienda": "Levis Plaza El Trebol", "Conexion": "PCLO4000012203O", "Caja": "C3" },
-  { "Controlador": "LV_TREBOL", "StoreNo": "8", "Tienda": "Levis Plaza El Trebol", "Conexion": "PCLO4000012204O", "Caja": "SELF" },
-  { "Controlador": "LV_OUTSANPEDRO", "StoreNo": "26", "Tienda": "Outlet Levis San Pedro", "Conexion": "PCLO4000011701O", "Caja": "C1" },
-  { "Controlador": "LV_OUTSANPEDRO", "StoreNo": "26", "Tienda": "Outlet Levis San Pedro", "Conexion": "PCLO4000011702O", "Caja": "C2" },
-  { "Controlador": "LV_OUTSANPEDRO", "StoreNo": "26", "Tienda": "Outlet Levis San Pedro", "Conexion": "PCLO4000011703O", "Caja": "C3" },
-  { "Controlador": "LV_OUTSANPEDRO", "StoreNo": "26", "Tienda": "Outlet Levis San Pedro", "Conexion": "PCLO4000011704O", "Caja": "C4" },
-  { "Controlador": "", "StoreNo": "", "Tienda": "Outlet Levis Vña Park", "Conexion": "PCLO4000010101O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "", "Tienda": "Outlet Levis Vña Park", "Conexion": "PCLO4000010102O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "", "Tienda": "Mall Plaza Antofagasta", "Conexion": "PCLO4000013401O", "Caja": "MAIN" },
-  { "Controlador": "", "StoreNo": "", "Tienda": "Mall Plaza Antofagasta", "Conexion": "PCLO4000013402O", "Caja": "C1" },
-  { "Controlador": "", "StoreNo": "", "Tienda": "Mall Plaza Antofagasta", "Conexion": "PCLO4000013403O", "Caja": "C2" },
-  { "Controlador": "", "StoreNo": "", "Tienda": "Mall Plaza Antofagasta", "Conexion": "PCLO4000013404O", "Caja": "C3" }
+
+COMO MODELO ESTO
+
+Aquí tienes el archivo JSON con los datos estructurados según el modelo que solicitaste:
+
+Tu archivo JSON está listo
+
+Ícono de JSON
+tiendas_levis
+ JSON 
+Abrir
+He extraído la información siguiendo el formato de ejemplo proporcionado para los registros iniciales de la lista.
+
+TE FALTARON
+
+Python
+# Let's write a python script to parse the entire table text or structure from the image contents accurately.
+# Since I can read the full image context visually, I will construct the complete JSON array for all rows in the image.
+
+full_data = [
+    {"Controlador": "00", "StoreNo": "37", "Tienda": "Levis Arauco Maipu", "Conexion": "PCLO4000011101O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "37", "Tienda": "Levis Arauco Maipu", "Conexion": "PCLO4000011102O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "53", "Tienda": "Levis Patio/Viva Outlet Maipu", "Conexion": "PCLO4000010401O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "53", "Tienda": "Levis Patio/Viva Outlet Maipu", "Conexion": "PCLO4000010402O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "15", "Tienda": "Levis Portal La Dehesa", "Conexion": "PCLO4000013101O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "15", "Tienda": "Levis Portal La Dehesa", "Conexion": "PCLO4000013102O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "15", "Tienda": "Levis Portal La Dehesa", "Conexion": "PCLO4000013103O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "23", "Tienda": "Levis Plaza Norte", "Conexion": "PCLO4000010901O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "23", "Tienda": "Levis Plaza Norte", "Conexion": "PCLO4000010902O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "25", "Tienda": "Levis Plaza Egaña", "Conexion": "PCLO4000013201O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "25", "Tienda": "Levis Plaza Egaña", "Conexion": "PCLO4000013202O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "25", "Tienda": "Levis Plaza Egaña", "Conexion": "PCLO4000013203O", "Caja": "C3"},
+    {"Controlador": "00", "StoreNo": "43", "Tienda": "Levis Estacion Central", "Conexion": "PCLO4000014001O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "43", "Tienda": "Levis Estacion Central", "Conexion": "PCLO4000014002O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "77", "Tienda": "Levis Galeria Imperio", "Conexion": "PCLO4000014701O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "77", "Tienda": "Levis Galeria Imperio", "Conexion": "PCLO4000014702O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "77", "Tienda": "Levis Galeria Imperio", "Conexion": "PCLO4000014703O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "14", "Tienda": "Levis Arauco Center", "Conexion": "PCLO4000012701O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "14", "Tienda": "Levis Arauco Center", "Conexion": "PCLO4000012702O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "14", "Tienda": "Levis Arauco Center", "Conexion": "PCLO4000012703O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "36", "Tienda": "Levis Portal Ñuñoa", "Conexion": "PCLO4000012901O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "36", "Tienda": "Levis Portal Ñuñoa", "Conexion": "PCLO4000012902O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "36", "Tienda": "Levis Portal Ñuñoa", "Conexion": "PCLO4000012903O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "33", "Tienda": "Levis Los Dominicos", "Conexion": "PCLO4000013501O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "33", "Tienda": "Levis Los Dominicos", "Conexion": "PCLO4000013502O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "33", "Tienda": "Levis Los Dominicos", "Conexion": "PCLO4000013503O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "85", "Tienda": "Levis Vespucio Urbano", "Conexion": "PCLO4000014901O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "85", "Tienda": "Levis Vespucio Urbano", "Conexion": "PCLO4000014902O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "85", "Tienda": "Levis Vespucio Urbano", "Conexion": "PCLO4000014903O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "85", "Tienda": "Levis Vespucio Urbano", "Conexion": "PCLO4000014904O", "Caja": "C3"},
+    {"Controlador": "00", "StoreNo": "2", "Tienda": "Levis Plaza Oeste", "Conexion": "PCLO4000012601O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "2", "Tienda": "Levis Plaza Oeste", "Conexion": "PCLO4000012602O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "2", "Tienda": "Levis Plaza Oeste", "Conexion": "PCLO4000012603O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "2", "Tienda": "Levis Plaza Oeste", "Conexion": "PCLO4000012604O", "Caja": "C3"},
+    {"Controlador": "00", "StoreNo": "34", "Tienda": "Levis Plaza Vespucio", "Conexion": "PC204000013301O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "34", "Tienda": "Levis Plaza Vespucio", "Conexion": "PC204000013302O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "34", "Tienda": "Levis Plaza Vespucio", "Conexion": "PC204000013303O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "34", "Tienda": "Levis Plaza Vespucio", "Conexion": "PC204000013304O", "Caja": "C3"},
+    {"Controlador": "00", "StoreNo": "34", "Tienda": "Levis Plaza Vespucio", "Conexion": "PC204000013305O", "Caja": "C4"},
+    {"Controlador": "00", "StoreNo": "86", "Tienda": "Levis Paseo Independencia", "Conexion": "PCLO4000014801O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "86", "Tienda": "Levis Paseo Independencia", "Conexion": "PCLO4000014802O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "86", "Tienda": "Levis Paseo Independencia", "Conexion": "PCLO4000014803O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "86", "Tienda": "Levis Paseo Independencia", "Conexion": "PCLO4000014804O", "Caja": "C3"},
+    {"Controlador": "00", "StoreNo": "81", "Tienda": "Levis Plaza Sur", "Conexion": "PCLO4000014301O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "81", "Tienda": "Levis Plaza Sur", "Conexion": "PCLO4000014302O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "81", "Tienda": "Levis Plaza Sur", "Conexion": "PCLO4000014303O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "81", "Tienda": "Levis Plaza Sur", "Conexion": "PCLO4000014304O", "Caja": "C3"},
+    {"Controlador": "00", "StoreNo": "38", "Tienda": "Levis Easton", "Conexion": "PC2040000010001O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "38", "Tienda": "Levis Easton", "Conexion": "PC2040000010002O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "38", "Tienda": "Levis Easton", "Conexion": "PC2040000010003O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "38", "Tienda": "Levis Easton", "Conexion": "PC2040000010004O", "Caja": "C3"},
+    {"Controlador": "00", "StoreNo": "11", "Tienda": "Levis Centro", "Conexion": "PC204000011301O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "11", "Tienda": "Levis Centro", "Conexion": "PC204000011302O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "11", "Tienda": "Levis Centro", "Conexion": "PC204000011303O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "83", "Tienda": "Levis Casa Costanera", "Conexion": "PCLO4000014401O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "83", "Tienda": "Levis Casa Costanera", "Conexion": "PCLO4000014402O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "83", "Tienda": "Levis Casa Costanera", "Conexion": "PCLO4000014403O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "17", "Tienda": "Levis Alto Las Condes", "Conexion": "PC204000007501O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "17", "Tienda": "Levis Alto Las Condes", "Conexion": "PC204000007502O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "17", "Tienda": "Levis Alto Las Condes", "Conexion": "PC204000007503O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "17", "Tienda": "Levis Alto Las Condes", "Conexion": "PC204000007504O", "Caja": "C3"},
+    {"Controlador": "00", "StoreNo": "44", "Tienda": "Levis Outlet Huechuraba", "Conexion": "PC204000017101O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "44", "Tienda": "Levis Outlet Huechuraba", "Conexion": "PC204000017102O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "44", "Tienda": "Levis Outlet Huechuraba", "Conexion": "PC204000017103O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "10", "Tienda": "Levis Parque Arauco", "Conexion": "PC204000017401O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "10", "Tienda": "Levis Parque Arauco", "Conexion": "PC204000017402O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "10", "Tienda": "Levis Parque Arauco", "Conexion": "PC204000017403O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "10", "Tienda": "Levis Parque Arauco", "Conexion": "PC204000017404O", "Caja": "C3"},
+    {"Controlador": "00", "StoreNo": "10", "Tienda": "Levis Parque Arauco", "Conexion": "PC204000017405O", "Caja": "SH 1"},
+    {"Controlador": "00", "StoreNo": "5", "Tienda": "Levis Costanera Center", "Conexion": "PC204000007001O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "5", "Tienda": "Levis Costanera Center", "Conexion": "PC204000007002O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "5", "Tienda": "Levis Costanera Center", "Conexion": "PC204000007003O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "5", "Tienda": "Levis Costanera Center", "Conexion": "PC204000007004O", "Caja": "C3"},
+    {"Controlador": "00", "StoreNo": "5", "Tienda": "Levis Costanera Center", "Conexion": "PC204000007005O", "Caja": "SH 1"},
+    {"Controlador": "00", "StoreNo": "5", "Tienda": "Levis Costanera Center", "Conexion": "PC204000007006O", "Caja": "SH 2"},
+    {"Controlador": "00", "StoreNo": "47", "Tienda": "Levis Marina Arauco", "Conexion": "PC204000017801O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "47", "Tienda": "Levis Marina Arauco", "Conexion": "PC204000017802O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "47", "Tienda": "Levis Marina Arauco", "Conexion": "PC204000017803O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "47", "Tienda": "Levis Marina Arauco", "Conexion": "PC204000017804O", "Caja": "C3"},
+    {"Controlador": "00", "StoreNo": "47", "Tienda": "Levis Marina Arauco", "Conexion": "PC204000017805O", "Caja": "C4"},
+    {"Controlador": "00", "StoreNo": "18", "Tienda": "Levis Mall Plaza Las Heras Valdivia", "Conexion": "PC204000007001O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "18", "Tienda": "Levis Mall Plaza Las Heras Valdivia", "Conexion": "PC204000007002O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "18", "Tienda": "Levis Mall Plaza Las Heras Valdivia", "Conexion": "PC204000007003O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "18", "Tienda": "Levis Mall Plaza Las Heras Valdivia", "Conexion": "PC204000007004O", "Caja": "C3"},
+    {"Controlador": "00", "StoreNo": "87", "Tienda": "Levis Mall Outlet Rancagua", "Conexion": "PCLO4000015001O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "87", "Tienda": "Levis Mall Outlet Rancagua", "Conexion": "PCLO4000015002O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "87", "Tienda": "Levis Mall Outlet Rancagua", "Conexion": "PCLO4000015003O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "87", "Tienda": "Levis Mall Outlet Rancagua", "Conexion": "PCLO4000015004O", "Caja": "C3"},
+    {"Controlador": "00", "StoreNo": "57", "Tienda": "Outlet Levis Peñuelas", "Conexion": "PCLO4000010301O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "57", "Tienda": "Outlet Levis Peñuelas", "Conexion": "PCLO4000010302O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "9", "Tienda": "Levis La Serena", "Conexion": "PCLO4000017301O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "9", "Tienda": "Levis La Serena", "Conexion": "PCLO4000017302O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "71", "Tienda": "Levis Factory San Antonio", "Conexion": "PCLO4000011001O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "40", "Tienda": "Levis Curauma", "Conexion": "PC204000011601O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "49", "Tienda": "Levis Curauma", "Conexion": "PC204000011601O", "Caja": "C1"}, # or Curauma duplicates
+    {"Controlador": "00", "StoreNo": "55", "Tienda": "Outlet Levis Paseo La Hortensia", "Conexion": "PCLO4000010701O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "55", "Tienda": "Outlet Levis Paseo La Hortensia", "Conexion": "PCLO4000010702O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "55", "Tienda": "Outlet Levis Paseo La Hortensia", "Conexion": "PCLO4000010703O", "Caja": "C3"},
+    {"Controlador": "00", "StoreNo": "68", "Tienda": "Outlet Levis Mall Plaza Calama", "Conexion": "PCLO4000013901O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "68", "Tienda": "Outlet Levis Mall Plaza Calama", "Conexion": "PCLO4000013902O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "68", "Tienda": "Outlet Levis Mall Plaza Calama", "Conexion": "PCLO4000013903O", "Caja": "C3"},
+    {"Controlador": "00", "StoreNo": "73", "Tienda": "Levis Plaza Copiapo", "Conexion": "PCLO4000011401O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "84", "Tienda": "Levis Iquique", "Conexion": "PCLO4000014501O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "84", "Tienda": "Levis Iquique", "Conexion": "PCLO4000014502O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "84", "Tienda": "Levis Iquique", "Conexion": "PCLO4000014503O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "84", "Tienda": "Levis Iquique", "Conexion": "PCLO4000014504O", "Caja": "C3"},
+    {"Controlador": "00", "StoreNo": "19", "Tienda": "Levis Mall Tobalaba", "Conexion": "PCLO4000010601O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "19", "Tienda": "Levis Mall Tobalaba", "Conexion": "PCLO4000010602O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "19", "Tienda": "Levis Mall Tobalaba", "Conexion": "PCLO4000010603O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "19", "Tienda": "Levis Mall Tobalaba", "Conexion": "PCLO4000010604O", "Caja": "C3"},
+    {"Controlador": "LV_RANCAGUA", "StoreNo": "47", "Tienda": "Outlet Levis Rancagua", "Conexion": "PCLO4000010201O", "Caja": "C1"},
+    {"Controlador": "LV_RANCAGUA", "StoreNo": "47", "Tienda": "Outlet Levis Rancagua", "Conexion": "PCLO4000010202O", "Caja": "C2"},
+    {"Controlador": "LV_CURICO", "StoreNo": "43", "Tienda": "Levis Curico", "Conexion": "PCLO4000013601O", "Caja": "C1"},
+    {"Controlador": "LV_CURICO", "StoreNo": "43", "Tienda": "Levis Curico", "Conexion": "PCLO4000013602O", "Caja": "C2"},
+    {"Controlador": "LV_MAULETALCA", "StoreNo": "33", "Tienda": "Levis Mall Plaza Maule Talca", "Conexion": "PCLO4000011901O", "Caja": "C1"},
+    {"Controlador": "LV_MAULETALCA", "StoreNo": "33", "Tienda": "Levis Mall Plaza Maule Talca", "Conexion": "PCLO4000011902O", "Caja": "C2"},
+    {"Controlador": "LV_MAULETALCA", "StoreNo": "33", "Tienda": "Levis Mall Plaza Maule Talca", "Conexion": "PCLO4000011903O", "Caja": "C3"},
+    {"Controlador": "LV_TALCAGDFLOR", "StoreNo": "67", "Tienda": "Outlet Levis Talca Gral. Flores", "Conexion": "PCLO4000014201O", "Caja": "C1"},
+    {"Controlador": "LV_TALCAGDFLOR", "StoreNo": "67", "Tienda": "Outlet Levis Talca Gral. Flores", "Conexion": "PCLO4000014202O", "Caja": "C2"},
+    {"Controlador": "LV_TALCAGDFLOR", "StoreNo": "67", "Tienda": "Outlet Levis Talca Gral. Flores", "Conexion": "PCLO4000014203O", "Caja": "C3"},
+    {"Controlador": "LV_ARAUCHILLAN", "StoreNo": "35", "Tienda": "Levis Arauco Chillan", "Conexion": "PCLO4000011801O", "Caja": "C1"},
+    {"Controlador": "LV_ARAUCHILLAN", "StoreNo": "35", "Tienda": "Levis Arauco Chillan", "Conexion": "PCLO4000011802O", "Caja": "C2"},
+    {"Controlador": "LV_VCHILLAN", "StoreNo": "60", "Tienda": "Levis Vivo Chillan", "Conexion": "PCLO4000010801O", "Caja": "C1"},
+    {"Controlador": "LV_VCHILLAN", "StoreNo": "60", "Tienda": "Levis Vivo Chillan", "Conexion": "PCLO4000010802O", "Caja": "C2"},
+    {"Controlador": "LV_VCHILLAN", "StoreNo": "60", "Tienda": "Levis Vivo Chillan", "Conexion": "PCLO4000010803O", "Caja": "C3"},
+    {"Controlador": "LV_VCHILLAN", "StoreNo": "60", "Tienda": "Levis Vivo Chillan", "Conexion": "PCLO4000010804O", "Caja": "C4"},
+    {"Controlador": "LV_BIOBIO", "StoreNo": "73", "Tienda": "Levis Biobio", "Conexion": "PCLO4000014601O", "Caja": "C1"},
+    {"Controlador": "LV_BIOBIO", "StoreNo": "73", "Tienda": "Levis Biobio", "Conexion": "PCLO4000014602O", "Caja": "C2"},
+    {"Controlador": "LV_BIOBIO", "StoreNo": "73", "Tienda": "Levis Biobio", "Conexion": "PCLO4000014603O", "Caja": "C3"},
+    {"Controlador": "LV_BIOBIO", "StoreNo": "73", "Tienda": "Levis Biobio", "Conexion": "PCLO4000014604O", "Caja": "C4"},
+    {"Controlador": "LV_TRESOL", "StoreNo": "8", "Tienda": "Levis Plaza El Trebol", "Conexion": "PCLO4000012201O", "Caja": "C1"},
+    {"Controlador": "LV_TRESOL", "StoreNo": "8", "Tienda": "Levis Plaza El Trebol", "Conexion": "PCLO4000012202O", "Caja": "C2"},
+    {"Controlador": "LV_TRESOL", "StoreNo": "8", "Tienda": "Levis Plaza El Trebol", "Conexion": "PCLO4000012203O", "Caja": "C3"},
+    {"Controlador": "LV_TRESOL", "StoreNo": "8", "Tienda": "Levis Plaza El Trebol", "Conexion": "PCLO4000012204O", "Caja": "SELF"},
+    {"Controlador": "LV_OUTSANPEDRO", "StoreNo": "26", "Tienda": "Outlet Levis San Pedro", "Conexion": "PCLO4000011701O", "Caja": "C1"},
+    {"Controlador": "LV_OUTSANPEDRO", "StoreNo": "26", "Tienda": "Outlet Levis San Pedro", "Conexion": "PCLO4000011702O", "Caja": "C2"},
+    {"Controlador": "LV_OUTSANPEDRO", "StoreNo": "26", "Tienda": "Outlet Levis San Pedro", "Conexion": "PCLO4000011703O", "Caja": "C3"},
+    {"Controlador": "LV_OUTSANPEDRO", "StoreNo": "26", "Tienda": "Outlet Levis San Pedro", "Conexion": "PCLO4000011704O", "Caja": "C4"},
+    {"Controlador": "00", "StoreNo": "", "Tienda": "Outlet Levis Viña Park", "Conexion": "PCLO4000010101O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "", "Tienda": "Outlet Levis Viña Park", "Conexion": "PCLO4000010102O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "", "Tienda": "Mall Plaza Antofagasta", "Conexion": "PCLO4000013401O", "Caja": "MAIN"},
+    {"Controlador": "00", "StoreNo": "", "Tienda": "Mall Plaza Antofagasta", "Conexion": "PCLO4000013402O", "Caja": "C1"},
+    {"Controlador": "00", "StoreNo": "", "Tienda": "Mall Plaza Antofagasta", "Conexion": "PCLO4000013403O", "Caja": "C2"},
+    {"Controlador": "00", "StoreNo": "", "Tienda": "Mall Plaza Antofagasta", "Conexion": "PCLO4000013404O", "Caja": "C3"}
+]
+
+import json
+print(json.dumps(full_data, indent=4, ensure_ascii=False))
+
+Resultado de código
+[
+    {
+        "Controlador": "00",
+        "StoreNo": "37",
+        "Tienda": "Levis Arauco Maipu",
+        "Conexion": "PCLO4000011101O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "37",
+        "Tienda": "Levis Arauco Maipu",
+        "Conexion": "PCLO4000011102O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "53",
+        "Tienda": "Levis Patio/Viva Outlet Maipu",
+        "Conexion": "PCLO4000010401O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "53",
+        "Tienda": "Levis Patio/Viva Outlet Maipu",
+        "Conexion": "PCLO4000010402O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "15",
+        "Tienda": "Levis Portal La Dehesa",
+        "Conexion": "PCLO4000013101O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "15",
+        "Tienda": "Levis Portal La Dehesa",
+        "Conexion": "PCLO4000013102O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "15",
+        "Tienda": "Levis Portal La Dehesa",
+        "Conexion": "PCLO4000013103O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "23",
+        "Tienda": "Levis Plaza Norte",
+        "Conexion": "PCLO4000010901O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "23",
+        "Tienda": "Levis Plaza Norte",
+        "Conexion": "PCLO4000010902O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "25",
+        "Tienda": "Levis Plaza Egaña",
+        "Conexion": "PCLO4000013201O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "25",
+        "Tienda": "Levis Plaza Egaña",
+        "Conexion": "PCLO4000013202O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "25",
+        "Tienda": "Levis Plaza Egaña",
+        "Conexion": "PCLO4000013203O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "43",
+        "Tienda": "Levis Estacion Central",
+        "Conexion": "PCLO4000014001O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "43",
+        "Tienda": "Levis Estacion Central",
+        "Conexion": "PCLO4000014002O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "77",
+        "Tienda": "Levis Galeria Imperio",
+        "Conexion": "PCLO4000014701O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "77",
+        "Tienda": "Levis Galeria Imperio",
+        "Conexion": "PCLO4000014702O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "77",
+        "Tienda": "Levis Galeria Imperio",
+        "Conexion": "PCLO4000014703O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "14",
+        "Tienda": "Levis Arauco Center",
+        "Conexion": "PCLO4000012701O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "14",
+        "Tienda": "Levis Arauco Center",
+        "Conexion": "PCLO4000012702O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "14",
+        "Tienda": "Levis Arauco Center",
+        "Conexion": "PCLO4000012703O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "36",
+        "Tienda": "Levis Portal Ñuñoa",
+        "Conexion": "PCLO4000012901O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "36",
+        "Tienda": "Levis Portal Ñuñoa",
+        "Conexion": "PCLO4000012902O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "36",
+        "Tienda": "Levis Portal Ñuñoa",
+        "Conexion": "PCLO4000012903O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "33",
+        "Tienda": "Levis Los Dominicos",
+        "Conexion": "PCLO4000013501O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "33",
+        "Tienda": "Levis Los Dominicos",
+        "Conexion": "PCLO4000013502O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "33",
+        "Tienda": "Levis Los Dominicos",
+        "Conexion": "PCLO4000013503O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "85",
+        "Tienda": "Levis Vespucio Urbano",
+        "Conexion": "PCLO4000014901O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "85",
+        "Tienda": "Levis Vespucio Urbano",
+        "Conexion": "PCLO4000014902O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "85",
+        "Tienda": "Levis Vespucio Urbano",
+        "Conexion": "PCLO4000014903O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "85",
+        "Tienda": "Levis Vespucio Urbano",
+        "Conexion": "PCLO4000014904O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "2",
+        "Tienda": "Levis Plaza Oeste",
+        "Conexion": "PCLO4000012601O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "2",
+        "Tienda": "Levis Plaza Oeste",
+        "Conexion": "PCLO4000012602O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "2",
+        "Tienda": "Levis Plaza Oeste",
+        "Conexion": "PCLO4000012603O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "2",
+        "Tienda": "Levis Plaza Oeste",
+        "Conexion": "PCLO4000012604O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "34",
+        "Tienda": "Levis Plaza Vespucio",
+        "Conexion": "PC204000013301O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "34",
+        "Tienda": "Levis Plaza Vespucio",
+        "Conexion": "PC204000013302O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "34",
+        "Tienda": "Levis Plaza Vespucio",
+        "Conexion": "PC204000013303O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "34",
+        "Tienda": "Levis Plaza Vespucio",
+        "Conexion": "PC204000013304O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "34",
+        "Tienda": "Levis Plaza Vespucio",
+        "Conexion": "PC204000013305O",
+        "Caja": "C4"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "86",
+        "Tienda": "Levis Paseo Independencia",
+        "Conexion": "PCLO4000014801O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "86",
+        "Tienda": "Levis Paseo Independencia",
+        "Conexion": "PCLO4000014802O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "86",
+        "Tienda": "Levis Paseo Independencia",
+        "Conexion": "PCLO4000014803O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "86",
+        "Tienda": "Levis Paseo Independencia",
+        "Conexion": "PCLO4000014804O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "81",
+        "Tienda": "Levis Plaza Sur",
+        "Conexion": "PCLO4000014301O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "81",
+        "Tienda": "Levis Plaza Sur",
+        "Conexion": "PCLO4000014302O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "81",
+        "Tienda": "Levis Plaza Sur",
+        "Conexion": "PCLO4000014303O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "81",
+        "Tienda": "Levis Plaza Sur",
+        "Conexion": "PCLO4000014304O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "38",
+        "Tienda": "Levis Easton",
+        "Conexion": "PC2040000010001O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "38",
+        "Tienda": "Levis Easton",
+        "Conexion": "PC2040000010002O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "38",
+        "Tienda": "Levis Easton",
+        "Conexion": "PC2040000010003O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "38",
+        "Tienda": "Levis Easton",
+        "Conexion": "PC2040000010004O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "11",
+        "Tienda": "Levis Centro",
+        "Conexion": "PC204000011301O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "11",
+        "Tienda": "Levis Centro",
+        "Conexion": "PC204000011302O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "11",
+        "Tienda": "Levis Centro",
+        "Conexion": "PC204000011303O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "83",
+        "Tienda": "Levis Casa Costanera",
+        "Conexion": "PCLO4000014401O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "83",
+        "Tienda": "Levis Casa Costanera",
+        "Conexion": "PCLO4000014402O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "83",
+        "Tienda": "Levis Casa Costanera",
+        "Conexion": "PCLO4000014403O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "17",
+        "Tienda": "Levis Alto Las Condes",
+        "Conexion": "PC204000007501O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "17",
+        "Tienda": "Levis Alto Las Condes",
+        "Conexion": "PC204000007502O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "17",
+        "Tienda": "Levis Alto Las Condes",
+        "Conexion": "PC204000007503O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "17",
+        "Tienda": "Levis Alto Las Condes",
+        "Conexion": "PC204000007504O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "44",
+        "Tienda": "Levis Outlet Huechuraba",
+        "Conexion": "PC204000017101O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "44",
+        "Tienda": "Levis Outlet Huechuraba",
+        "Conexion": "PC204000017102O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "44",
+        "Tienda": "Levis Outlet Huechuraba",
+        "Conexion": "PC204000017103O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "10",
+        "Tienda": "Levis Parque Arauco",
+        "Conexion": "PC204000017401O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "10",
+        "Tienda": "Levis Parque Arauco",
+        "Conexion": "PC204000017402O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "10",
+        "Tienda": "Levis Parque Arauco",
+        "Conexion": "PC204000017403O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "10",
+        "Tienda": "Levis Parque Arauco",
+        "Conexion": "PC204000017404O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "10",
+        "Tienda": "Levis Parque Arauco",
+        "Conexion": "PC204000017405O",
+        "Caja": "SH 1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "5",
+        "Tienda": "Levis Costanera Center",
+        "Conexion": "PC204000007001O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "5",
+        "Tienda": "Levis Costanera Center",
+        "Conexion": "PC204000007002O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "5",
+        "Tienda": "Levis Costanera Center",
+        "Conexion": "PC204000007003O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "5",
+        "Tienda": "Levis Costanera Center",
+        "Conexion": "PC204000007004O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "5",
+        "Tienda": "Levis Costanera Center",
+        "Conexion": "PC204000007005O",
+        "Caja": "SH 1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "5",
+        "Tienda": "Levis Costanera Center",
+        "Conexion": "PC204000007006O",
+        "Caja": "SH 2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "47",
+        "Tienda": "Levis Marina Arauco",
+        "Conexion": "PC204000017801O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "47",
+        "Tienda": "Levis Marina Arauco",
+        "Conexion": "PC204000017802O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "47",
+        "Tienda": "Levis Marina Arauco",
+        "Conexion": "PC204000017803O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "47",
+        "Tienda": "Levis Marina Arauco",
+        "Conexion": "PC204000017804O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "47",
+        "Tienda": "Levis Marina Arauco",
+        "Conexion": "PC204000017805O",
+        "Caja": "C4"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "18",
+        "Tienda": "Levis Mall Plaza Las Heras Valdivia",
+        "Conexion": "PC204000007001O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "18",
+        "Tienda": "Levis Mall Plaza Las Heras Valdivia",
+        "Conexion": "PC204000007002O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "18",
+        "Tienda": "Levis Mall Plaza Las Heras Valdivia",
+        "Conexion": "PC204000007003O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "18",
+        "Tienda": "Levis Mall Plaza Las Heras Valdivia",
+        "Conexion": "PC204000007004O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "87",
+        "Tienda": "Levis Mall Outlet Rancagua",
+        "Conexion": "PCLO4000015001O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "87",
+        "Tienda": "Levis Mall Outlet Rancagua",
+        "Conexion": "PCLO4000015002O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "87",
+        "Tienda": "Levis Mall Outlet Rancagua",
+        "Conexion": "PCLO4000015003O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "87",
+        "Tienda": "Levis Mall Outlet Rancagua",
+        "Conexion": "PCLO4000015004O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "57",
+        "Tienda": "Outlet Levis Peñuelas",
+        "Conexion": "PCLO4000010301O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "57",
+        "Tienda": "Outlet Levis Peñuelas",
+        "Conexion": "PCLO4000010302O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "9",
+        "Tienda": "Levis La Serena",
+        "Conexion": "PCLO4000017301O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "9",
+        "Tienda": "Levis La Serena",
+        "Conexion": "PCLO4000017302O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "71",
+        "Tienda": "Levis Factory San Antonio",
+        "Conexion": "PCLO4000011001O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "40",
+        "Tienda": "Levis Curauma",
+        "Conexion": "PC204000011601O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "49",
+        "Tienda": "Levis Curauma",
+        "Conexion": "PC204000011601O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "55",
+        "Tienda": "Outlet Levis Paseo La Hortensia",
+        "Conexion": "PCLO4000010701O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "55",
+        "Tienda": "Outlet Levis Paseo La Hortensia",
+        "Conexion": "PCLO4000010702O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "55",
+        "Tienda": "Outlet Levis Paseo La Hortensia",
+        "Conexion": "PCLO4000010703O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "68",
+        "Tienda": "Outlet Levis Mall Plaza Calama",
+        "Conexion": "PCLO4000013901O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "68",
+        "Tienda": "Outlet Levis Mall Plaza Calama",
+        "Conexion": "PCLO4000013902O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "68",
+        "Tienda": "Outlet Levis Mall Plaza Calama",
+        "Conexion": "PCLO4000013903O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "73",
+        "Tienda": "Levis Plaza Copiapo",
+        "Conexion": "PCLO4000011401O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "84",
+        "Tienda": "Levis Iquique",
+        "Conexion": "PCLO4000014501O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "84",
+        "Tienda": "Levis Iquique",
+        "Conexion": "PCLO4000014502O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "84",
+        "Tienda": "Levis Iquique",
+        "Conexion": "PCLO4000014503O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "84",
+        "Tienda": "Levis Iquique",
+        "Conexion": "PCLO4000014504O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "19",
+        "Tienda": "Levis Mall Tobalaba",
+        "Conexion": "PCLO4000010601O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "19",
+        "Tienda": "Levis Mall Tobalaba",
+        "Conexion": "PCLO4000010602O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "19",
+        "Tienda": "Levis Mall Tobalaba",
+        "Conexion": "PCLO4000010603O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "19",
+        "Tienda": "Levis Mall Tobalaba",
+        "Conexion": "PCLO4000010604O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "LV_RANCAGUA",
+        "StoreNo": "47",
+        "Tienda": "Outlet Levis Rancagua",
+        "Conexion": "PCLO4000010201O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_RANCAGUA",
+        "StoreNo": "47",
+        "Tienda": "Outlet Levis Rancagua",
+        "Conexion": "PCLO4000010202O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_CURICO",
+        "StoreNo": "43",
+        "Tienda": "Levis Curico",
+        "Conexion": "PCLO4000013601O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_CURICO",
+        "StoreNo": "43",
+        "Tienda": "Levis Curico",
+        "Conexion": "PCLO4000013602O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_MAULETALCA",
+        "StoreNo": "33",
+        "Tienda": "Levis Mall Plaza Maule Talca",
+        "Conexion": "PCLO4000011901O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_MAULETALCA",
+        "StoreNo": "33",
+        "Tienda": "Levis Mall Plaza Maule Talca",
+        "Conexion": "PCLO4000011902O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_MAULETALCA",
+        "StoreNo": "33",
+        "Tienda": "Levis Mall Plaza Maule Talca",
+        "Conexion": "PCLO4000011903O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "LV_TALCAGDFLOR",
+        "StoreNo": "67",
+        "Tienda": "Outlet Levis Talca Gral. Flores",
+        "Conexion": "PCLO4000014201O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_TALCAGDFLOR",
+        "StoreNo": "67",
+        "Tienda": "Outlet Levis Talca Gral. Flores",
+        "Conexion": "PCLO4000014202O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_TALCAGDFLOR",
+        "StoreNo": "67",
+        "Tienda": "Outlet Levis Talca Gral. Flores",
+        "Conexion": "PCLO4000014203O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "LV_ARAUCHILLAN",
+        "StoreNo": "35",
+        "Tienda": "Levis Arauco Chillan",
+        "Conexion": "PCLO4000011801O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_ARAUCHILLAN",
+        "StoreNo": "35",
+        "Tienda": "Levis Arauco Chillan",
+        "Conexion": "PCLO4000011802O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_VCHILLAN",
+        "StoreNo": "60",
+        "Tienda": "Levis Vivo Chillan",
+        "Conexion": "PCLO4000010801O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_VCHILLAN",
+        "StoreNo": "60",
+        "Tienda": "Levis Vivo Chillan",
+        "Conexion": "PCLO4000010802O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_VCHILLAN",
+        "StoreNo": "60",
+        "Tienda": "Levis Vivo Chillan",
+        "Conexion": "PCLO4000010803O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "LV_VCHILLAN",
+        "StoreNo": "60",
+        "Tienda": "Levis Vivo Chillan",
+        "Conexion": "PCLO4000010804O",
+        "Caja": "C4"
+    },
+    {
+        "Controlador": "LV_BIOBIO",
+        "StoreNo": "73",
+        "Tienda": "Levis Biobio",
+        "Conexion": "PCLO4000014601O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_BIOBIO",
+        "StoreNo": "73",
+        "Tienda": "Levis Biobio",
+        "Conexion": "PCLO4000014602O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_BIOBIO",
+        "StoreNo": "73",
+        "Tienda": "Levis Biobio",
+        "Conexion": "PCLO4000014603O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "LV_BIOBIO",
+        "StoreNo": "73",
+        "Tienda": "Levis Biobio",
+        "Conexion": "PCLO4000014604O",
+        "Caja": "C4"
+    },
+    {
+        "Controlador": "LV_TRESOL",
+        "StoreNo": "8",
+        "Tienda": "Levis Plaza El Trebol",
+        "Conexion": "PCLO4000012201O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_TRESOL",
+        "StoreNo": "8",
+        "Tienda": "Levis Plaza El Trebol",
+        "Conexion": "PCLO4000012202O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_TRESOL",
+        "StoreNo": "8",
+        "Tienda": "Levis Plaza El Trebol",
+        "Conexion": "PCLO4000012203O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "LV_TRESOL",
+        "StoreNo": "8",
+        "Tienda": "Levis Plaza El Trebol",
+        "Conexion": "PCLO4000012204O",
+        "Caja": "SELF"
+    },
+    {
+        "Controlador": "LV_OUTSANPEDRO",
+        "StoreNo": "26",
+        "Tienda": "Outlet Levis San Pedro",
+        "Conexion": "PCLO4000011701O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_OUTSANPEDRO",
+        "StoreNo": "26",
+        "Tienda": "Outlet Levis San Pedro",
+        "Conexion": "PCLO4000011702O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_OUTSANPEDRO",
+        "StoreNo": "26",
+        "Tienda": "Outlet Levis San Pedro",
+        "Conexion": "PCLO4000011703O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "LV_OUTSANPEDRO",
+        "StoreNo": "26",
+        "Tienda": "Outlet Levis San Pedro",
+        "Conexion": "PCLO4000011704O",
+        "Caja": "C4"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "",
+        "Tienda": "Outlet Levis Viña Park",
+        "Conexion": "PCLO4000010101O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "",
+        "Tienda": "Outlet Levis Viña Park",
+        "Conexion": "PCLO4000010102O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "",
+        "Tienda": "Mall Plaza Antofagasta",
+        "Conexion": "PCLO4000013401O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "",
+        "Tienda": "Mall Plaza Antofagasta",
+        "Conexion": "PCLO4000013402O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "",
+        "Tienda": "Mall Plaza Antofagasta",
+        "Conexion": "PCLO4000013403O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "",
+        "Tienda": "Mall Plaza Antofagasta",
+        "Conexion": "PCLO4000013404O",
+        "Caja": "C3"
+    }
+]
+
+JSON
+[
+    {
+        "Controlador": "00",
+        "StoreNo": "37",
+        "Tienda": "Levis Arauco Maipu",
+        "Conexion": "PCLO4000011101O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "37",
+        "Tienda": "Levis Arauco Maipu",
+        "Conexion": "PCLO4000011102O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "53",
+        "Tienda": "Levis Patio/Viva Outlet Maipu",
+        "Conexion": "PCLO4000010401O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "53",
+        "Tienda": "Levis Patio/Viva Outlet Maipu",
+        "Conexion": "PCLO4000010402O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "15",
+        "Tienda": "Levis Portal La Dehesa",
+        "Conexion": "PCLO4000013101O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "15",
+        "Tienda": "Levis Portal La Dehesa",
+        "Conexion": "PCLO4000013102O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "15",
+        "Tienda": "Levis Portal La Dehesa",
+        "Conexion": "PCLO4000013103O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "23",
+        "Tienda": "Levis Plaza Norte",
+        "Conexion": "PCLO4000010901O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "23",
+        "Tienda": "Levis Plaza Norte",
+        "Conexion": "PCLO4000010902O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "25",
+        "Tienda": "Levis Plaza Egaña",
+        "Conexion": "PCLO4000013201O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "25",
+        "Tienda": "Levis Plaza Egaña",
+        "Conexion": "PCLO4000013202O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "25",
+        "Tienda": "Levis Plaza Egaña",
+        "Conexion": "PCLO4000013203O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "43",
+        "Tienda": "Levis Estacion Central",
+        "Conexion": "PCLO4000014001O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "43",
+        "Tienda": "Levis Estacion Central",
+        "Conexion": "PCLO4000014002O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "77",
+        "Tienda": "Levis Galeria Imperio",
+        "Conexion": "PCLO4000014701O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "77",
+        "Tienda": "Levis Galeria Imperio",
+        "Conexion": "PCLO4000014702O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "77",
+        "Tienda": "Levis Galeria Imperio",
+        "Conexion": "PCLO4000014703O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "14",
+        "Tienda": "Levis Arauco Center",
+        "Conexion": "PCLO4000012701O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "14",
+        "Tienda": "Levis Arauco Center",
+        "Conexion": "PCLO4000012702O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "14",
+        "Tienda": "Levis Arauco Center",
+        "Conexion": "PCLO4000012703O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "36",
+        "Tienda": "Levis Portal Ñuñoa",
+        "Conexion": "PCLO4000012901O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "36",
+        "Tienda": "Levis Portal Ñuñoa",
+        "Conexion": "PCLO4000012902O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "36",
+        "Tienda": "Levis Portal Ñuñoa",
+        "Conexion": "PCLO4000012903O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "33",
+        "Tienda": "Levis Los Dominicos",
+        "Conexion": "PCLO4000013501O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "33",
+        "Tienda": "Levis Los Dominicos",
+        "Conexion": "PCLO4000013502O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "33",
+        "Tienda": "Levis Los Dominicos",
+        "Conexion": "PCLO4000013503O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "85",
+        "Tienda": "Levis Vespucio Urbano",
+        "Conexion": "PCLO4000014901O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "85",
+        "Tienda": "Levis Vespucio Urbano",
+        "Conexion": "PCLO4000014902O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "85",
+        "Tienda": "Levis Vespucio Urbano",
+        "Conexion": "PCLO4000014903O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "85",
+        "Tienda": "Levis Vespucio Urbano",
+        "Conexion": "PCLO4000014904O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "2",
+        "Tienda": "Levis Plaza Oeste",
+        "Conexion": "PCLO4000012601O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "2",
+        "Tienda": "Levis Plaza Oeste",
+        "Conexion": "PCLO4000012602O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "2",
+        "Tienda": "Levis Plaza Oeste",
+        "Conexion": "PCLO4000012603O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "2",
+        "Tienda": "Levis Plaza Oeste",
+        "Conexion": "PCLO4000012604O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "34",
+        "Tienda": "Levis Plaza Vespucio",
+        "Conexion": "PC204000013301O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "34",
+        "Tienda": "Levis Plaza Vespucio",
+        "Conexion": "PC204000013302O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "34",
+        "Tienda": "Levis Plaza Vespucio",
+        "Conexion": "PC204000013303O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "34",
+        "Tienda": "Levis Plaza Vespucio",
+        "Conexion": "PC204000013304O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "34",
+        "Tienda": "Levis Plaza Vespucio",
+        "Conexion": "PC204000013305O",
+        "Caja": "C4"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "86",
+        "Tienda": "Levis Paseo Independencia",
+        "Conexion": "PCLO4000014801O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "86",
+        "Tienda": "Levis Paseo Independencia",
+        "Conexion": "PCLO4000014802O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "86",
+        "Tienda": "Levis Paseo Independencia",
+        "Conexion": "PCLO4000014803O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "86",
+        "Tienda": "Levis Paseo Independencia",
+        "Conexion": "PCLO4000014804O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "81",
+        "Tienda": "Levis Plaza Sur",
+        "Conexion": "PCLO4000014301O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "81",
+        "Tienda": "Levis Plaza Sur",
+        "Conexion": "PCLO4000014302O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "81",
+        "Tienda": "Levis Plaza Sur",
+        "Conexion": "PCLO4000014303O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "81",
+        "Tienda": "Levis Plaza Sur",
+        "Conexion": "PCLO4000014304O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "38",
+        "Tienda": "Levis Easton",
+        "Conexion": "PC2040000010001O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "38",
+        "Tienda": "Levis Easton",
+        "Conexion": "PC2040000010002O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "38",
+        "Tienda": "Levis Easton",
+        "Conexion": "PC2040000010003O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "38",
+        "Tienda": "Levis Easton",
+        "Conexion": "PC2040000010004O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "11",
+        "Tienda": "Levis Centro",
+        "Conexion": "PC204000011301O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "11",
+        "Tienda": "Levis Centro",
+        "Conexion": "PC204000011302O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "11",
+        "Tienda": "Levis Centro",
+        "Conexion": "PC204000011303O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "83",
+        "Tienda": "Levis Casa Costanera",
+        "Conexion": "PCLO4000014401O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "83",
+        "Tienda": "Levis Casa Costanera",
+        "Conexion": "PCLO4000014402O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "83",
+        "Tienda": "Levis Casa Costanera",
+        "Conexion": "PCLO4000014403O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "17",
+        "Tienda": "Levis Alto Las Condes",
+        "Conexion": "PC204000007501O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "17",
+        "Tienda": "Levis Alto Las Condes",
+        "Conexion": "PC204000007502O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "17",
+        "Tienda": "Levis Alto Las Condes",
+        "Conexion": "PC204000007503O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "17",
+        "Tienda": "Levis Alto Las Condes",
+        "Conexion": "PC204000007504O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "44",
+        "Tienda": "Levis Outlet Huechuraba",
+        "Conexion": "PC204000017101O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "44",
+        "Tienda": "Levis Outlet Huechuraba",
+        "Conexion": "PC204000017102O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "44",
+        "Tienda": "Levis Outlet Huechuraba",
+        "Conexion": "PC204000017103O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "10",
+        "Tienda": "Levis Parque Arauco",
+        "Conexion": "PC204000017401O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "10",
+        "Tienda": "Levis Parque Arauco",
+        "Conexion": "PC204000017402O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "10",
+        "Tienda": "Levis Parque Arauco",
+        "Conexion": "PC204000017403O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "10",
+        "Tienda": "Levis Parque Arauco",
+        "Conexion": "PC204000017404O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "10",
+        "Tienda": "Levis Parque Arauco",
+        "Conexion": "PC204000017405O",
+        "Caja": "SH 1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "5",
+        "Tienda": "Levis Costanera Center",
+        "Conexion": "PC204000007001O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "5",
+        "Tienda": "Levis Costanera Center",
+        "Conexion": "PC204000007002O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "5",
+        "Tienda": "Levis Costanera Center",
+        "Conexion": "PC204000007003O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "5",
+        "Tienda": "Levis Costanera Center",
+        "Conexion": "PC204000007004O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "5",
+        "Tienda": "Levis Costanera Center",
+        "Conexion": "PC204000007005O",
+        "Caja": "SH 1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "5",
+        "Tienda": "Levis Costanera Center",
+        "Conexion": "PC204000007006O",
+        "Caja": "SH 2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "47",
+        "Tienda": "Levis Marina Arauco",
+        "Conexion": "PC204000017801O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "47",
+        "Tienda": "Levis Marina Arauco",
+        "Conexion": "PC204000017802O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "47",
+        "Tienda": "Levis Marina Arauco",
+        "Conexion": "PC204000017803O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "47",
+        "Tienda": "Levis Marina Arauco",
+        "Conexion": "PC204000017804O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "47",
+        "Tienda": "Levis Marina Arauco",
+        "Conexion": "PC204000017805O",
+        "Caja": "C4"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "18",
+        "Tienda": "Levis Mall Plaza Las Heras Valdivia",
+        "Conexion": "PC204000007001O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "18",
+        "Tienda": "Levis Mall Plaza Las Heras Valdivia",
+        "Conexion": "PC204000007002O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "18",
+        "Tienda": "Levis Mall Plaza Las Heras Valdivia",
+        "Conexion": "PC204000007003O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "18",
+        "Tienda": "Levis Mall Plaza Las Heras Valdivia",
+        "Conexion": "PC204000007004O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "87",
+        "Tienda": "Levis Mall Outlet Rancagua",
+        "Conexion": "PCLO4000015001O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "87",
+        "Tienda": "Levis Mall Outlet Rancagua",
+        "Conexion": "PCLO4000015002O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "87",
+        "Tienda": "Levis Mall Outlet Rancagua",
+        "Conexion": "PCLO4000015003O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "87",
+        "Tienda": "Levis Mall Outlet Rancagua",
+        "Conexion": "PCLO4000015004O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "57",
+        "Tienda": "Outlet Levis Peñuelas",
+        "Conexion": "PCLO4000010301O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "57",
+        "Tienda": "Outlet Levis Peñuelas",
+        "Conexion": "PCLO4000010302O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "9",
+        "Tienda": "Levis La Serena",
+        "Conexion": "PCLO4000017301O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "9",
+        "Tienda": "Levis La Serena",
+        "Conexion": "PCLO4000017302O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "71",
+        "Tienda": "Levis Factory San Antonio",
+        "Conexion": "PCLO4000011001O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "40",
+        "Tienda": "Levis Curauma",
+        "Conexion": "PC204000011601O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "49",
+        "Tienda": "Levis Curauma",
+        "Conexion": "PC204000011601O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "55",
+        "Tienda": "Outlet Levis Paseo La Hortensia",
+        "Conexion": "PCLO4000010701O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "55",
+        "Tienda": "Outlet Levis Paseo La Hortensia",
+        "Conexion": "PCLO4000010702O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "55",
+        "Tienda": "Outlet Levis Paseo La Hortensia",
+        "Conexion": "PCLO4000010703O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "68",
+        "Tienda": "Outlet Levis Mall Plaza Calama",
+        "Conexion": "PCLO4000013901O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "68",
+        "Tienda": "Outlet Levis Mall Plaza Calama",
+        "Conexion": "PCLO4000013902O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "68",
+        "Tienda": "Outlet Levis Mall Plaza Calama",
+        "Conexion": "PCLO4000013903O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "73",
+        "Tienda": "Levis Plaza Copiapo",
+        "Conexion": "PCLO4000011401O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "84",
+        "Tienda": "Levis Iquique",
+        "Conexion": "PCLO4000014501O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "84",
+        "Tienda": "Levis Iquique",
+        "Conexion": "PCLO4000014502O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "84",
+        "Tienda": "Levis Iquique",
+        "Conexion": "PCLO4000014503O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "84",
+        "Tienda": "Levis Iquique",
+        "Conexion": "PCLO4000014504O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "19",
+        "Tienda": "Levis Mall Tobalaba",
+        "Conexion": "PCLO4000010601O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "19",
+        "Tienda": "Levis Mall Tobalaba",
+        "Conexion": "PCLO4000010602O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "19",
+        "Tienda": "Levis Mall Tobalaba",
+        "Conexion": "PCLO4000010603O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "19",
+        "Tienda": "Levis Mall Tobalaba",
+        "Conexion": "PCLO4000010604O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "LV_RANCAGUA",
+        "StoreNo": "47",
+        "Tienda": "Outlet Levis Rancagua",
+        "Conexion": "PCLO4000010201O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_RANCAGUA",
+        "StoreNo": "47",
+        "Tienda": "Outlet Levis Rancagua",
+        "Conexion": "PCLO4000010202O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_CURICO",
+        "StoreNo": "43",
+        "Tienda": "Levis Curico",
+        "Conexion": "PCLO4000013601O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_CURICO",
+        "StoreNo": "43",
+        "Tienda": "Levis Curico",
+        "Conexion": "PCLO4000013602O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_MAULETALCA",
+        "StoreNo": "33",
+        "Tienda": "Levis Mall Plaza Maule Talca",
+        "Conexion": "PCLO4000011901O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_MAULETALCA",
+        "StoreNo": "33",
+        "Tienda": "Levis Mall Plaza Maule Talca",
+        "Conexion": "PCLO4000011902O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_MAULETALCA",
+        "StoreNo": "33",
+        "Tienda": "Levis Mall Plaza Maule Talca",
+        "Conexion": "PCLO4000011903O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "LV_TALCAGDFLOR",
+        "StoreNo": "67",
+        "Tienda": "Outlet Levis Talca Gral. Flores",
+        "Conexion": "PCLO4000014201O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_TALCAGDFLOR",
+        "StoreNo": "67",
+        "Tienda": "Outlet Levis Talca Gral. Flores",
+        "Conexion": "PCLO4000014202O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_TALCAGDFLOR",
+        "StoreNo": "67",
+        "Tienda": "Outlet Levis Talca Gral. Flores",
+        "Conexion": "PCLO4000014203O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "LV_ARAUCHILLAN",
+        "StoreNo": "35",
+        "Tienda": "Levis Arauco Chillan",
+        "Conexion": "PCLO4000011801O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_ARAUCHILLAN",
+        "StoreNo": "35",
+        "Tienda": "Levis Arauco Chillan",
+        "Conexion": "PCLO4000011802O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_VCHILLAN",
+        "StoreNo": "60",
+        "Tienda": "Levis Vivo Chillan",
+        "Conexion": "PCLO4000010801O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_VCHILLAN",
+        "StoreNo": "60",
+        "Tienda": "Levis Vivo Chillan",
+        "Conexion": "PCLO4000010802O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_VCHILLAN",
+        "StoreNo": "60",
+        "Tienda": "Levis Vivo Chillan",
+        "Conexion": "PCLO4000010803O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "LV_VCHILLAN",
+        "StoreNo": "60",
+        "Tienda": "Levis Vivo Chillan",
+        "Conexion": "PCLO4000010804O",
+        "Caja": "C4"
+    },
+    {
+        "Controlador": "LV_BIOBIO",
+        "StoreNo": "73",
+        "Tienda": "Levis Biobio",
+        "Conexion": "PCLO4000014601O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_BIOBIO",
+        "StoreNo": "73",
+        "Tienda": "Levis Biobio",
+        "Conexion": "PCLO4000014602O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_BIOBIO",
+        "StoreNo": "73",
+        "Tienda": "Levis Biobio",
+        "Conexion": "PCLO4000014603O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "LV_BIOBIO",
+        "StoreNo": "73",
+        "Tienda": "Levis Biobio",
+        "Conexion": "PCLO4000014604O",
+        "Caja": "C4"
+    },
+    {
+        "Controlador": "LV_TRESOL",
+        "StoreNo": "8",
+        "Tienda": "Levis Plaza El Trebol",
+        "Conexion": "PCLO4000012201O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_TRESOL",
+        "StoreNo": "8",
+        "Tienda": "Levis Plaza El Trebol",
+        "Conexion": "PCLO4000012202O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_TRESOL",
+        "StoreNo": "8",
+        "Tienda": "Levis Plaza El Trebol",
+        "Conexion": "PCLO4000012203O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "LV_TRESOL",
+        "StoreNo": "8",
+        "Tienda": "Levis Plaza El Trebol",
+        "Conexion": "PCLO4000012204O",
+        "Caja": "SELF"
+    },
+    {
+        "Controlador": "LV_OUTSANPEDRO",
+        "StoreNo": "26",
+        "Tienda": "Outlet Levis San Pedro",
+        "Conexion": "PCLO4000011701O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "LV_OUTSANPEDRO",
+        "StoreNo": "26",
+        "Tienda": "Outlet Levis San Pedro",
+        "Conexion": "PCLO4000011702O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "LV_OUTSANPEDRO",
+        "StoreNo": "26",
+        "Tienda": "Outlet Levis San Pedro",
+        "Conexion": "PCLO4000011703O",
+        "Caja": "C3"
+    },
+    {
+        "Controlador": "LV_OUTSANPEDRO",
+        "StoreNo": "26",
+        "Tienda": "Outlet Levis San Pedro",
+        "Conexion": "PCLO4000011704O",
+        "Caja": "C4"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "",
+        "Tienda": "Outlet Levis Viña Park",
+        "Conexion": "PCLO4000010101O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "",
+        "Tienda": "Outlet Levis Viña Park",
+        "Conexion": "PCLO4000010102O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "",
+        "Tienda": "Mall Plaza Antofagasta",
+        "Conexion": "PCLO4000013401O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "",
+        "Tienda": "Mall Plaza Antofagasta",
+        "Conexion": "PCLO4000013402O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "",
+        "Tienda": "Mall Plaza Antofagasta",
+        "Conexion": "PCLO4000013403O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "00",
+        "StoreNo": "",
+        "Tienda": "Mall Plaza Antofagasta",
+        "Conexion": "PCLO4000013404O",
+        "Caja": "C3"
+    }
+]
+me estas cambiando nombres y conexiones, por favor usa este excel , tiene que ser la pestaña hoja 1
+
+Python
+import pandas as pd
+
+# Load the Excel file to inspect it
+file_path = 'KARDEX CD 13-08.csv'
+# Since the user mentioned "hoja 1" but the file provided is .csv, 
+# I will read it as a CSV first, assuming it might be a CSV export of an Excel sheet.
+df = pd.read_csv(file_path)
+print(df.head())
+print(df.columns)
+
+Resultado de código
+Traceback (most recent call last):
+  File "<xbox-string>", line 7, in <module>
+    df = pd.read_csv(file_path)
+  File "readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "readers.py", line 1679, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "parsers.pyx", line 548, in pandas._libs.parsers.TextReader.__cinit__
+  File "parsers.pyx", line 637, in pandas._libs.parsers.TextReader._get_header
+  File "parsers.pyx", line 848, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 859, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2017, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf3 in position 34: invalid continuation byte
+
+Python
+# Try reading with a different encoding
+import pandas as pd
+
+file_path = 'KARDEX CD 13-08.csv'
+try:
+    df = pd.read_csv(file_path, encoding='latin1')
+    print(df.head())
+    print(df.columns)
+except Exception as e:
+    print(e)
+
+Resultado de código
+              Controlador;STORE NO;Tienda;Conexión;Caja
+0             ;37;Levis Arauco Maipu;PCLO4000011101O;C1
+1             ;37;Levis Arauco Maipu;PCLO4000011102O;C2
+2  ;50;Levis Patio/Vivo/Outlet Maipu;PCLO4000010401O;C1
+3  ;50;Levis Patio/Vivo/Outlet Maipu;PCLO4000010402O;C2
+4       ;15;Levis Portal La Dehesa;PCLO4000013101O;MAIN
+Index(['Controlador;STORE NO;Tienda;Conexión;Caja'], dtype='object')
+
+Python
+# The data seems to be separated by semicolons
+df = pd.read_csv(file_path, sep=';', encoding='latin1')
+print(df.head())
+print(df.columns)
+
+Resultado de código
+  Controlador  STORE NO                         Tienda         Conexión  Caja
+0         NaN      37.0             Levis Arauco Maipu  PCLO4000011101O    C1
+1         NaN      37.0             Levis Arauco Maipu  PCLO4000011102O    C2
+2         NaN      50.0  Levis Patio/Vivo/Outlet Maipu  PCLO4000010401O    C1
+3         NaN      50.0  Levis Patio/Vivo/Outlet Maipu  PCLO4000010402O    C2
+4         NaN      15.0         Levis Portal La Dehesa  PCLO4000013101O  MAIN
+Index(['Controlador', 'STORE NO', 'Tienda', 'Conexión', 'Caja'], dtype='object')
+
+Entiendo perfectamente. He cargado el archivo KARDEX CD 13-08.csv y veo la información estructurada por Tienda, Conexión y Caja.
+
+Para poder ayudarte, ¿qué necesitas que haga con esta información? Por ejemplo:
+
+¿Necesitas corregir algún nombre de tienda o conexión específico?
+
+¿Quieres que valide si las conexiones coinciden con las tiendas según alguna otra lista?
+
+¿Necesitas un resumen o algún cambio en el formato de los datos?
+
+Quedo atento a tus instrucciones para proceder correctamente con los datos de este archivo.
+
+madame le json de la hoja 1 por favor
+
+Aquí tienes el archivo en formato JSON con la información de la "hoja 1" (basada en el archivo KARDEX CD 13-08.csv):
+
+Ícono de JSON
+KARDEX_CD_13_08
+ JSON 
+Abrir
+los store no no deben tener decimal
+
+Python
+import pandas as pd
+import numpy as np
+
+# Cargar el archivo nuevamente
+file_path = 'KARDEX CD 13-08.csv'
+df = pd.read_csv(file_path, sep=';', encoding='latin1')
+
+# Convertir 'STORE NO' a entero, manejando los nulos
+# Primero, aseguramos que sean numéricos, convirtiendo errores a NaN si los hay
+df['STORE NO'] = pd.to_numeric(df['STORE NO'], errors='coerce')
+
+# Convertir a Int64 para soportar nulos y enteros al mismo tiempo
+df['STORE NO'] = df['STORE NO'].astype('Int64')
+
+# Convertir el DataFrame a formato JSON nuevamente
+json_data = df.to_json(orient='records', force_ascii=False, indent=4)
+
+# Guardar el JSON en un archivo
+json_filename = 'KARDEX_CD_13_08_sin_decimales.json'
+with open(json_filename, 'w', encoding='utf-8') as f:
+    f.write(json_data)
+
+print(f"JSON generado sin decimales: {json_filename}")
+
+Resultado de código
+JSON generado sin decimales: KARDEX_CD_13_08_sin_decimales.json
+
+He actualizado el formato. Ahora, los valores en la columna "STORE NO" no tienen decimales.
+
+Aquí tienes el archivo JSON corregido:
+
+Ícono de JSON
+KARDEX_CD_13_08_sin_decimales
+ JSON 
+Abrir
+
+
+
+Gemini es una IA y puede cometer errores.
+
+Analizando
+[
+    {
+        "Controlador":null,
+        "STORE NO":37,
+        "Tienda":"Levis Arauco Maipu",
+        "Conexión":"PCLO4000011101O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":37,
+        "Tienda":"Levis Arauco Maipu",
+        "Conexión":"PCLO4000011102O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":50,
+        "Tienda":"Levis Patio\/Vivo\/Outlet Maipu",
+        "Conexión":"PCLO4000010401O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":50,
+        "Tienda":"Levis Patio\/Vivo\/Outlet Maipu",
+        "Conexión":"PCLO4000010402O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":15,
+        "Tienda":"Levis Portal La Dehesa",
+        "Conexión":"PCLO4000013101O",
+        "Caja":"MAIN"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":15,
+        "Tienda":"Levis Portal La Dehesa",
+        "Conexión":"PCLO4000013102O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":15,
+        "Tienda":"Levis Portal La Dehesa",
+        "Conexión":"PCLO4000013103O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":23,
+        "Tienda":"Levis Plaza Norte",
+        "Conexión":"PCLO4000010901O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":23,
+        "Tienda":"Levis Plaza Norte",
+        "Conexión":"PCLO4000010902O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":25,
+        "Tienda":"Levi’s Plaza Egaña",
+        "Conexión":"PCLO4000013201O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":25,
+        "Tienda":"Levi’s Plaza Egaña",
+        "Conexión":"PCLO4000013202O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":25,
+        "Tienda":"Levi’s Plaza Egaña",
+        "Conexión":"PCLO4000013203O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":63,
+        "Tienda":"Levi’s Estacion Central",
+        "Conexión":"PCLO4000014001O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":63,
+        "Tienda":"Levi’s Estacion Central",
+        "Conexión":"PCLO4000014002O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":77,
+        "Tienda":"Levis Galeria Imperio",
+        "Conexión":"PCLO4000014701O",
+        "Caja":"Main"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":77,
+        "Tienda":"Levis Galeria Imperio",
+        "Conexión":"PCLO4000014702O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":77,
+        "Tienda":"Levis Galeria Imperio",
+        "Conexión":"PCLO4000014703O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":14,
+        "Tienda":"Levis Florida center",
+        "Conexión":"PCLO4000012701O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":14,
+        "Tienda":"Levis Florida center",
+        "Conexión":"PCLO4000012702O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":14,
+        "Tienda":"Levis Florida center",
+        "Conexión":"PCLO4000012703O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":36,
+        "Tienda":"Levis Portal Ñuñoa",
+        "Conexión":"PCLO4000012901O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":36,
+        "Tienda":"Levis Portal Ñuñoa",
+        "Conexión":"PCLO4000012902O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":36,
+        "Tienda":"Levis Portal Ñuñoa",
+        "Conexión":"PCLO4000012903O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":30,
+        "Tienda":"Levis Los Dominicos",
+        "Conexión":"PCLO4000013501O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":30,
+        "Tienda":"Levis Los Dominicos",
+        "Conexión":"PCLO4000013502O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":30,
+        "Tienda":"Levis Los Dominicos",
+        "Conexión":"PCLO4000013503O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":85,
+        "Tienda":"Levis Viña Espacio Urbano",
+        "Conexión":"PCLO4000014801O",
+        "Caja":"Main"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":85,
+        "Tienda":"Levis Viña Espacio Urbano",
+        "Conexión":"PCLO4000014802O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":85,
+        "Tienda":"Levis Viña Espacio Urbano",
+        "Conexión":"PCLO4000014803O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":85,
+        "Tienda":"Levis Viña Espacio Urbano",
+        "Conexión":"PCLO4000014804O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":2,
+        "Tienda":"Levis Plaza Oeste",
+        "Conexión":"PCLO4000012601O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":2,
+        "Tienda":"Levis Plaza Oeste",
+        "Conexión":"PCLO4000012602O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":2,
+        "Tienda":"Levis Plaza Oeste",
+        "Conexión":"PCLO4000012603O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":2,
+        "Tienda":"Levis Plaza Oeste",
+        "Conexión":"PCLO4000012604O",
+        "Caja":"C4"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":34,
+        "Tienda":"Levis Plaza Vespucio",
+        "Conexión":"PCLO4000013301O",
+        "Caja":"MAIN"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":34,
+        "Tienda":"Levis Plaza Vespucio",
+        "Conexión":"PCLO4000013302O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":34,
+        "Tienda":"Levis Plaza Vespucio",
+        "Conexión":"PCLO4000013303O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":34,
+        "Tienda":"Levis Plaza Vespucio",
+        "Conexión":"PCLO4000013304O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":34,
+        "Tienda":"Levis Plaza Vespucio",
+        "Conexión":"PCLO4000013305O",
+        "Caja":"C4"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":86,
+        "Tienda":"Levis Barrio Independencia",
+        "Conexión":"PCLO4000014901O",
+        "Caja":"MAIN"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":86,
+        "Tienda":"Levis Barrio Independencia",
+        "Conexión":"PCLO4000014902O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":86,
+        "Tienda":"Levis Barrio Independencia",
+        "Conexión":"PCLO4000014903O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":86,
+        "Tienda":"Levis Barrio Independencia",
+        "Conexión":"PCLO4000014904O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":81,
+        "Tienda":"Levis Plaza Sur",
+        "Conexión":"PCLO4000014301O",
+        "Caja":"MAIN"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":81,
+        "Tienda":"Levis Plaza Sur",
+        "Conexión":"PCLO4000014302O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":81,
+        "Tienda":"Levis Plaza Sur",
+        "Conexión":"PCLO4000014303O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":81,
+        "Tienda":"Levis Plaza Sur",
+        "Conexión":"PCLO4000014304O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":38,
+        "Tienda":"Levis Easton ",
+        "Conexión":"PCLO4000010001O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":38,
+        "Tienda":"Levis Easton ",
+        "Conexión":"PCLO4000010002O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":38,
+        "Tienda":"Levis Easton ",
+        "Conexión":"PCLO4000010003O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":38,
+        "Tienda":"Levis Easton ",
+        "Conexión":"PCLO4000010004O",
+        "Caja":"C4"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":11,
+        "Tienda":"Levis Osorno",
+        "Conexión":"PCLO4000011301O",
+        "Caja":"Main"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":11,
+        "Tienda":"Levis Osorno",
+        "Conexión":"PCLO4000011302O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":11,
+        "Tienda":"Levis Osorno",
+        "Conexión":"PCLO4000011303O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":83,
+        "Tienda":"Levis Casa Costanera",
+        "Conexión":"PCLO4000014401O",
+        "Caja":"MAIN"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":83,
+        "Tienda":"Levis Casa Costanera",
+        "Conexión":"PCLO4000014402O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":83,
+        "Tienda":"Levis Casa Costanera",
+        "Conexión":"PCLO4000014403O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":12,
+        "Tienda":"Levis Alto Las Condes",
+        "Conexión":"PCLO4000012501O",
+        "Caja":"MAIN"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":12,
+        "Tienda":"Levis Alto Las Condes",
+        "Conexión":"PCLO4000012502O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":12,
+        "Tienda":"Levis Alto Las Condes",
+        "Conexión":"PCLO4000012503O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":12,
+        "Tienda":"Levis Alto Las Condes",
+        "Conexión":"PCLO4000012504O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":43,
+        "Tienda":"Levis Outlet Buenaventura",
+        "Conexión":"PCLO4000012101O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":43,
+        "Tienda":"Levis Outlet Buenaventura",
+        "Conexión":"PCLO4000012102O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":43,
+        "Tienda":"Levis Outlet Buenaventura",
+        "Conexión":"PCLO4000012103O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":10,
+        "Tienda":"Levis Parque Arauco",
+        "Conexión":"PCLO4000012401O",
+        "Caja":"MAIN"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":10,
+        "Tienda":"Levis Parque Arauco",
+        "Conexión":"PCLO4000012402O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":10,
+        "Tienda":"Levis Parque Arauco",
+        "Conexión":"PCLO4000012403O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":10,
+        "Tienda":"Levis Parque Arauco",
+        "Conexión":"PCLO4000012404O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":10,
+        "Tienda":"Levis Parque Arauco",
+        "Conexión":"PCLO4000012405O",
+        "Caja":"C4"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":10,
+        "Tienda":"Levis Parque Arauco",
+        "Conexión":"PCLO4000012406O",
+        "Caja":"SELF"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":5,
+        "Tienda":"Levis Costanera Center",
+        "Conexión":"PCLO4000013001O",
+        "Caja":"MAIN"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":5,
+        "Tienda":"Levis Costanera Center",
+        "Conexión":"PCLO4000013002O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":5,
+        "Tienda":"Levis Costanera Center",
+        "Conexión":"PCLO4000013003O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":5,
+        "Tienda":"Levis Costanera Center",
+        "Conexión":"PCLO4000013004O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":5,
+        "Tienda":"Levis Costanera Center",
+        "Conexión":"PCLO4000013005O",
+        "Caja":"C4"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":5,
+        "Tienda":"Levis Costanera Center",
+        "Conexión":"PCLO4000013006O",
+        "Caja":"SELF1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":5,
+        "Tienda":"Levis Costanera Center",
+        "Conexión":"PCLO4000013007O",
+        "Caja":"SELF2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":42,
+        "Tienda":"Levis Marina Arauco",
+        "Conexión":"PCLO4000012801O",
+        "Caja":"MAIN"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":42,
+        "Tienda":"Levis Marina Arauco",
+        "Conexión":"PCLO4000012802O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":42,
+        "Tienda":"Levis Marina Arauco",
+        "Conexión":"PCLO4000012803O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":42,
+        "Tienda":"Levis Marina Arauco",
+        "Conexión":"PCLO4000012804O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":42,
+        "Tienda":"Levis Marina Arauco",
+        "Conexión":"PCLO4000012805O",
+        "Caja":"C4"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":18,
+        "Tienda":"Levis Mall plaza Los Rios Valdivia (battery valdivia)",
+        "Conexión":"PCLO4000012001O",
+        "Caja":"Main"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":18,
+        "Tienda":"Levis Mall plaza Los Rios Valdivia (battery valdivia)",
+        "Conexión":"PCLO4000012002O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":18,
+        "Tienda":"Levis Mall plaza Los Rios Valdivia (battery valdivia)",
+        "Conexión":"PCLO4000012003O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":18,
+        "Tienda":"Levis Mall plaza Los Rios Valdivia (battery valdivia)",
+        "Conexión":"PCLO4000012004O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":87,
+        "Tienda":"Levis Mall Outlet Rancagua",
+        "Conexión":"PCLO4000015001O",
+        "Caja":"MAIN"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":87,
+        "Tienda":"Levis Mall Outlet Rancagua",
+        "Conexión":"PCLO4000015002O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":87,
+        "Tienda":"Levis Mall Outlet Rancagua",
+        "Conexión":"PCLO4000015003O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":87,
+        "Tienda":"Levis Mall Outlet Rancagua",
+        "Conexión":"PCLO4000015004O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":52,
+        "Tienda":"Outlet Levis Patio Peñuelas",
+        "Conexión":"PCLO4000010301O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":52,
+        "Tienda":"Outlet Levis Patio Peñuelas",
+        "Conexión":"PCLO4000010302O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":9,
+        "Tienda":"Levis La Serena",
+        "Conexión":"PCLO4000012301O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":9,
+        "Tienda":"Levis La Serena",
+        "Conexión":"PCLO4000012302O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":27,
+        "Tienda":"Levis\/Battery San Antonio",
+        "Conexión":"PCLO4000011001O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":40,
+        "Tienda":"Levis Curauma",
+        "Conexión":"PCLO4000011601O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":40,
+        "Tienda":"Levis Curauma",
+        "Conexión":"PCLO4000011602O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":55,
+        "Tienda":"Outlet Levis Paseo La Portada",
+        "Conexión":"PCLO4000010701O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":55,
+        "Tienda":"Outlet Levis Paseo La Portada",
+        "Conexión":"PCLO4000010702O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":55,
+        "Tienda":"Outlet Levis Paseo La Portada",
+        "Conexión":"PCLO4000010703O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":68,
+        "Tienda":"Outlet Levis Mall Plaza Calama",
+        "Conexión":"PCLO4000013901O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":68,
+        "Tienda":"Outlet Levis Mall Plaza Calama",
+        "Conexión":"PCLO4000013902O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":68,
+        "Tienda":"Outlet Levis Mall Plaza Calama",
+        "Conexión":"PCLO4000013903O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":29,
+        "Tienda":"Levis Plaza Copiapo",
+        "Conexión":"PCLO4000011401O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":84,
+        "Tienda":"Levis Iquique",
+        "Conexión":"PCLO4000014501O",
+        "Caja":"MAIN"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":84,
+        "Tienda":"Levis Iquique",
+        "Conexión":"PCLO4000014502O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":84,
+        "Tienda":"Levis Iquique",
+        "Conexión":"PCLO4000014503O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":84,
+        "Tienda":"Levis Iquique",
+        "Conexión":"PCLO4000014504O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":19,
+        "Tienda":"Levis mall Tobalaba",
+        "Conexión":"PCLO4000010601O",
+        "Caja":"MAIN"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":19,
+        "Tienda":"Levis mall Tobalaba",
+        "Conexión":"PCLO4000010602O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":19,
+        "Tienda":"Levis mall Tobalaba",
+        "Conexión":"PCLO4000010603O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":19,
+        "Tienda":"Levis mall Tobalaba",
+        "Conexión":"PCLO4000010604O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":"LV_RANCAGUA",
+        "STORE NO":47,
+        "Tienda":"Outlet Levis Rancagua",
+        "Conexión":"PCLO4000010201O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":47,
+        "Tienda":"Outlet Levis Rancagua",
+        "Conexión":"PCLO4000010202O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":"LV_CURICO",
+        "STORE NO":49,
+        "Tienda":"Levis Curico",
+        "Conexión":"PCLO4000013601O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":49,
+        "Tienda":"Levis Curico",
+        "Conexión":"PCLO4000013602O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":"LV_MAULETALCA",
+        "STORE NO":33,
+        "Tienda":"Levis Mall Plaza Maule Talca",
+        "Conexión":"PCLO4000011901O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":33,
+        "Tienda":"Levis Mall Plaza Maule Talca",
+        "Conexión":"PCLO4000011902O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":33,
+        "Tienda":"Levis Mall Plaza Maule Talca",
+        "Conexión":"PCLO4000011903O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":"LV_TALCAGOFLOR",
+        "STORE NO":67,
+        "Tienda":"Outlet Levis Talca Go Florida",
+        "Conexión":"PCLO4000014201O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":67,
+        "Tienda":"Outlet Levis Talca Go Florida",
+        "Conexión":"PCLO4000014202O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":67,
+        "Tienda":"Outlet Levis Talca Go Florida",
+        "Conexión":"PCLO4000014203O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":67,
+        "Tienda":"Outlet Levis Talca Go Florida",
+        "Conexión":"PCLO4000014204O",
+        "Caja":"C4"
+    },
+    {
+        "Controlador":"LV_ARAUCHILLAN",
+        "STORE NO":35,
+        "Tienda":"Levis Arauco Chillan",
+        "Conexión":"PCLO4000011801O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":35,
+        "Tienda":"Levis Arauco Chillan",
+        "Conexión":"PCLO4000011802O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":"LV_VCHILLAN",
+        "STORE NO":60,
+        "Tienda":"Levis Vivo Chillan",
+        "Conexión":"PCLO4000010801O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":60,
+        "Tienda":"Levis Vivo Chillan",
+        "Conexión":"PCLO4000010802O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":60,
+        "Tienda":"Levis Vivo Chillan",
+        "Conexión":"PCLO4000010803O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":60,
+        "Tienda":"Levis Vivo Chillan",
+        "Conexión":"PCLO4000010804O",
+        "Caja":"C4"
+    },
+    {
+        "Controlador":"LV_BIOBIO",
+        "STORE NO":73,
+        "Tienda":"Levis BioBio",
+        "Conexión":"PCLO4000014601O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":73,
+        "Tienda":"Levis BioBio",
+        "Conexión":"PCLO4000014602O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":73,
+        "Tienda":"Levis BioBio",
+        "Conexión":"PCLO4000014603O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":73,
+        "Tienda":"Levis BioBio",
+        "Conexión":"PCLO4000014604O",
+        "Caja":"C4"
+    },
+    {
+        "Controlador":"LV_TREBOL",
+        "STORE NO":8,
+        "Tienda":"Levis Plaza El Trebol",
+        "Conexión":"PCLO4000012201O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":8,
+        "Tienda":"Levis Plaza El Trebol",
+        "Conexión":"PCLO4000012202O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":8,
+        "Tienda":"Levis Plaza El Trebol",
+        "Conexión":"PCLO4000012203O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":8,
+        "Tienda":"Levis Plaza El Trebol",
+        "Conexión":"PCLO4000012204O",
+        "Caja":"SELF"
+    },
+    {
+        "Controlador":"LV_OUTSANPEDRO",
+        "STORE NO":26,
+        "Tienda":"Outlet levis San Pedro",
+        "Conexión":"PCLO4000011701O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":26,
+        "Tienda":"Outlet levis San Pedro",
+        "Conexión":"PCLO4000011702O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":26,
+        "Tienda":"Outlet levis San Pedro",
+        "Conexión":"PCLO4000011703O",
+        "Caja":"C3"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":26,
+        "Tienda":"Outlet levis San Pedro",
+        "Conexión":"PCLO4000011704O",
+        "Caja":"C4"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":null,
+        "Tienda":"Outlet Levis Viña Park",
+        "Conexión":"PCLO4000010101O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":null,
+        "Tienda":"Outlet Levis Viña Park",
+        "Conexión":"PCLO4000010102O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":null,
+        "Tienda":"Mall Plaza Antofagasta",
+        "Conexión":"PCLO4000013401O",
+        "Caja":"MAIN"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":null,
+        "Tienda":"Mall Plaza Antofagasta",
+        "Conexión":"PCLO4000013402O",
+        "Caja":"C1"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":null,
+        "Tienda":"Mall Plaza Antofagasta",
+        "Conexión":"PCLO4000013403O",
+        "Caja":"C2"
+    },
+    {
+        "Controlador":null,
+        "STORE NO":null,
+        "Tienda":"Mall Plaza Antofagasta",
+        "Conexión":"PCLO4000013404O",
+        "Caja":"C3"
+    }
 ]
