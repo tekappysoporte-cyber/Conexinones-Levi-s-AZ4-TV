@@ -101,7 +101,7 @@ else:
             st.markdown("---")
             st.subheader("⭐ Conexión Principal")
 
-            # Dividimos en 5 columnas: Tienda | Conexión TV | Caja | StoreNo | Controlador
+            # 5 columnas: Tienda | Conexión TV | Caja | StoreNo | Controlador
             col1, col2, col3, col4, col5 = st.columns([1.5, 2, 1.2, 1, 1.2])
 
             with col1:
@@ -160,18 +160,16 @@ else:
                 ["➕ Crear Nueva", "✏️ Modificar Existente", "🗑️ Eliminar Conexión"]
             )
 
-            # TAB 1: CREAR
+            # TAB 1: CREAR (Se asignan 'key' únicas a cada widget)
             with tab1:
                 st.subheader("Agregar una nueva conexión")
-                nueva_tienda = st.text_input("Nombre de la Tienda:")
-                nuevo_store_no = st.text_input("Número de Tienda (StoreNo):")
-                nuevo_controlador = st.text_input("Controlador:")
-                nueva_conexion = st.text_input(
-                    "Código de Conexión (ej: PCLO...):"
-                )
-                nueva_caja = st.text_input("Caja (ej: MAIN, C1, C2):")
+                nueva_tienda = st.text_input("Nombre de la Tienda:", key="add_tienda")
+                nuevo_store_no = st.text_input("Número de Tienda (StoreNo):", key="add_store_no")
+                nuevo_controlador = st.text_input("Controlador:", key="add_controlador")
+                nueva_conexion = st.text_input("Código de Conexión (ej: PCLO...):", key="add_conexion")
+                nueva_caja = st.text_input("Caja (ej: MAIN, C1, C2):", key="add_caja")
 
-                if st.button("Guardar Nueva Conexión"):
+                if st.button("Guardar Nueva Conexión", key="btn_add"):
                     if nueva_tienda and nueva_conexion and nueva_caja:
                         nuevo_registro = {
                             "tienda": nueva_tienda.strip(),
@@ -186,7 +184,7 @@ else:
                     else:
                         st.warning("Por favor completa los campos requeridos (Tienda, Conexión y Caja).")
 
-            # TAB 2: MODIFICAR
+            # TAB 2: MODIFICAR (Se asignan 'key' únicas)
             with tab2:
                 st.subheader("Modificar una conexión existente")
                 if "registros" in locals() and registros:
@@ -196,6 +194,7 @@ else:
                     seleccion_mod = st.selectbox(
                         "Selecciona la caja a modificar de la tienda actual:",
                         opciones_mod,
+                        key="mod_sel_box"
                     )
 
                     registro_actual = registros[
@@ -203,22 +202,22 @@ else:
                     ]
 
                     mod_tienda = st.text_input(
-                        "Tienda:", value=registro_actual.get("tienda", "")
+                        "Tienda:", value=registro_actual.get("tienda", ""), key="mod_tienda"
                     )
                     mod_store_no = st.text_input(
-                        "StoreNo:", value=str(registro_actual.get("store_no", ""))
+                        "StoreNo:", value=str(registro_actual.get("store_no", "")), key="mod_store_no"
                     )
                     mod_controlador = st.text_input(
-                        "Controlador:", value=str(registro_actual.get("controlador", ""))
+                        "Controlador:", value=str(registro_actual.get("controlador", "")), key="mod_controlador"
                     )
                     mod_conexion = st.text_input(
-                        "Conexión:", value=registro_actual.get("conexion", "")
+                        "Conexión:", value=registro_actual.get("conexion", ""), key="mod_conexion"
                     )
                     mod_caja = st.text_input(
-                        "Caja:", value=registro_actual.get("caja", "")
+                        "Caja:", value=registro_actual.get("caja", ""), key="mod_caja"
                     )
 
-                    if st.button("Actualizar Conexión"):
+                    if st.button("Actualizar Conexión", key="btn_mod"):
                         idx = datos.index(registro_actual)
                         datos[idx] = {
                             "tienda": mod_tienda.strip(),
@@ -240,7 +239,7 @@ else:
                     seleccion_del = st.selectbox(
                         "Selecciona la caja a eliminar de la tienda actual:",
                         opciones_del,
-                        key="del_sel",
+                        key="del_sel_box",
                     )
 
                     registro_a_eliminar = registros[
@@ -248,7 +247,7 @@ else:
                     ]
 
                     if st.button(
-                        "❌ Eliminar Conexión Definitivamente", type="primary"
+                        "❌ Eliminar Conexión Definitivamente", type="primary", key="btn_del"
                     ):
                         datos.remove(registro_a_eliminar)
                         guardar_datos(datos)
