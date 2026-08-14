@@ -5,6 +5,42 @@ import os
 
 st.set_page_config(page_title="Gestor de Conexiones Levi's", layout="wide", page_icon="👖")
 
+# ==========================================
+# CONFIGURACIÓN DE CONTRASEÑA
+# ==========================================
+# Cambia 'Levis2024' por la contraseña que quieras compartir con tus compañeros
+CLAVE_ACCESO = "Levis2024"
+
+if "autenticado" not in st.session_state:
+    st.session_state.autenticado = False
+
+if not st.session_state.autenticado:
+    st.title("🔒 Acceso Restringido")
+    st.info("Ingresa la contraseña para acceder al sistema.")
+    
+    clave_ingresada = st.text_input("Contraseña:", type="password")
+    if st.button("Ingresar", type="primary"):
+        if clave_ingresada == CLAVE_ACCESO:
+            st.session_state.autenticado = True
+            st.success("¡Acceso concedido!")
+            st.rerun()
+        else:
+            st.error("Contraseña incorrecta.")
+    
+    # Detiene la ejecución para que nadie vea los datos sin la contraseña
+    st.stop()
+
+# ==========================================
+# CÓDIGO DE LA APLICACIÓN (Si la contraseña es correcta)
+# ==========================================
+
+# Botón para cerrar sesión en la barra lateral
+with st.sidebar:
+    st.write("👤 **Sesión Activa**")
+    if st.button("🔒 Cerrar Sesión"):
+        st.session_state.autenticado = False
+        st.rerun()
+
 ARCHIVO_DATOS = "conexiones_datos.json"
 
 DATOS_INICIALES = [
@@ -12,25 +48,20 @@ DATOS_INICIALES = [
     {"tienda": "Levis Arauco Maipu", "conexion": "PCLO4000011102O", "caja": "C2"},
     {"tienda": "Levis Alto Las Condes", "conexion": "PCLO4000012501O", "caja": "MAIN"},
     {"tienda": "Levis Alto Las Condes", "conexion": "PCLO4000012502O", "caja": "C1"}
-    # ... Se mantendrán tus datos guardados en el archivo json
 ]
 
-# Función para cargar datos desde el archivo
 def cargar_datos():
     if os.path.exists(ARCHIVO_DATOS):
         with open(ARCHIVO_DATOS, "r", encoding="utf-8") as f:
             return json.load(f)
     else:
-        # Si no existe el archivo, crear uno inicial
         guardar_datos(DATOS_INICIALES)
         return DATOS_INICIALES
 
-# Función para guardar datos en el archivo
 def guardar_datos(datos):
     with open(ARCHIVO_DATOS, "w", encoding="utf-8") as f:
         json.dump(datos, f, ensure_ascii=False, indent=4)
 
-# Cargar datos al iniciar sesión
 if "conexiones" not in st.session_state:
     st.session_state.conexiones = cargar_datos()
 
@@ -38,11 +69,9 @@ st.title("👖 Gestor de Conexiones Levi's")
 
 tab1, tab2, tab3 = st.tabs(["🔎 Buscador de Tienda", "📝 Modificar / Eliminar", "➕ Crear Nueva Conexión"])
 
-# ==========================================
-# PESTAÑA 1: BÚSQUEDA DETALLADA
-# ==========================================
+# PESTAÑA 1: BUSCADOR
 with tab1:
-    st.session_state.conexiones = cargar_datos()  # Recargar siempre datos frescos
+    st.session_state.conexiones = cargar_datos()
     df_base = pd.DataFrame(st.session_state.conexiones)
     tiendas_unicas = sorted(df_base["tienda"].unique().tolist()) if not df_base.empty else []
 
@@ -88,9 +117,7 @@ with tab1:
     else:
         st.info("👆 Por favor selecciona una tienda para consultar sus conexiones.")
 
-# ==========================================
 # PESTAÑA 2: MODIFICAR / ELIMINAR
-# ==========================================
 with tab2:
     st.header("Gestión de Registros Existentes")
     st.info("💡 Edita las celdas directamente o borra filas. Luego haz clic en 'Guardar Cambios'.")
@@ -105,14 +132,12 @@ with tab2:
 
     if st.button("💾 Guardar Cambios en la Tabla", type="primary"):
         nuevos_datos = df_editado.to_dict("records")
-        guardar_datos(nuevos_datos)  # Se escribe de forma permanente
+        guardar_datos(nuevos_datos)
         st.session_state.conexiones = nuevos_datos
         st.success("¡Base de datos guardada con éxito!")
         st.rerun()
 
-# ==========================================
 # PESTAÑA 3: CREAR NUEVA CONEXIÓN
-# ==========================================
 with tab3:
     st.header("Agregar Nueva Conexión")
     with st.form("form_agregar"):
@@ -134,7 +159,7 @@ with tab3:
                     "conexion": n_conexion.strip(),
                     "caja": n_caja.strip()
                 })
-                guardar_datos(lista_actual)  # Guarda de forma permanente
+                guardar_datos(lista_actual)
                 st.session_state.conexiones = lista_actual
                 st.success(f"¡Se agregó correctamente '{n_tienda}' ({n_caja})!")
                 st.rerun()
