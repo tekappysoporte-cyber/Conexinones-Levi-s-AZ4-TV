@@ -40,12 +40,21 @@ def limpiar_busqueda():
     st.session_state["box_tienda"] = None
 
 
-# Función para extraer campos de forma limpia sin importar el tipo de dato
-def obtener_campo(diccionario, clave):
-    val = diccionario.get(clave, "")
-    if val is None:
+# FUNCIÓN A PRUEBA DE MAYÚSCULAS/MINÚSCULAS
+def obtener_campo(diccionario, clave_buscada):
+    """Obtiene el valor de una clave ignorando mayúsculas, minúsculas y espacios."""
+    if not isinstance(diccionario, dict):
         return ""
-    return str(val).strip()
+
+    clave_norm = clave_buscada.lower().strip()
+
+    for k, v in diccionario.items():
+        if str(k).lower().strip() == clave_norm:
+            if v is not None:
+                val = str(v).strip()
+                if val != "" and val.lower() != "null":
+                    return val
+    return ""
 
 
 if not st.session_state.autenticado:
@@ -73,13 +82,13 @@ else:
     datos = cargar_datos()
 
     if datos:
-        # Extraer tiendas únicas ordenadas alfabéticamente
+        # Extraer TODAS las tiendas (sin importar si la clave es 'Tienda' o 'tienda')
         tiendas = sorted(
             list(
                 set(
-                    obtener_campo(d, "Tienda")
+                    obtener_campo(d, "tienda")
                     for d in datos
-                    if obtener_campo(d, "Tienda")
+                    if obtener_campo(d, "tienda")
                 )
             )
         )
@@ -102,9 +111,9 @@ else:
             st.button("🧹 Limpiar Búsqueda", on_click=limpiar_busqueda)
 
         if tienda_seleccionada:
-            # Filtrar todos los registros pertenecientes a la tienda seleccionada
+            # Filtrar registros de la tienda seleccionada
             registros = [
-                d for d in datos if obtener_campo(d, "Tienda") == tienda_seleccionada
+                d for d in datos if obtener_campo(d, "tienda") == tienda_seleccionada
             ]
 
             # Selección de Conexión Principal (Prioridad a MAIN / MAIN1)
@@ -112,28 +121,27 @@ else:
                 (
                     d
                     for d in registros
-                    if obtener_campo(d, "Caja").upper() in ["MAIN", "MAIN1"]
+                    if obtener_campo(d, "caja").upper() in ["MAIN", "MAIN1"]
                 ),
                 registros[0],
             )
             secundarias = [d for d in registros if d != principal]
 
             # -------------------------------------------------------------
-            # EXTRAER STORENO Y CONTROLADOR DE CUALQUIER CAJA DE LA TIENDA
+            # BÚSQUEDA GLOBAL DE StoreNo Y Controlador EN TODA LA TIENDA
             # -------------------------------------------------------------
             store_no_val = ""
             controlador_val = ""
 
             for reg in registros:
-                s = obtener_campo(reg, "StoreNo")
-                c = obtener_campo(reg, "Controlador")
+                s = obtener_campo(reg, "storeno")
+                c = obtener_campo(reg, "controlador")
 
                 if s and not store_no_val:
                     store_no_val = s
                 if c and not controlador_val:
                     controlador_val = c
 
-            # Mostrar "N/A" solo si ninguna caja de esa tienda tiene el dato en el JSON
             final_store_no = store_no_val if store_no_val else "N/A"
             final_controlador = controlador_val if controlador_val else "N/A"
 
@@ -143,9 +151,9 @@ else:
 
             col1, col2, col3, col4, col5 = st.columns([1.5, 2, 1.2, 1, 1.2])
 
-            nombre_tienda = obtener_campo(principal, "Tienda")
-            conexion_tv = obtener_campo(principal, "Conexion")
-            caja_val = obtener_campo(principal, "Caja")
+            nombre_tienda = obtener_campo(principal, "tienda")
+            conexion_tv = obtener_campo(principal, "conexion")
+            caja_val = obtener_campo(principal, "caja")
 
             with col1:
                 st.caption("Tienda")
@@ -188,8 +196,8 @@ else:
                 )
 
                 for item in secundarias:
-                    caja_sec = obtener_campo(item, "Caja")
-                    conexion_sec = obtener_campo(item, "Conexion")
+                    caja_sec = obtener_campo(item, "caja")
+                    conexion_sec = obtener_campo(item, "conexion")
 
                     col_a, col_b = st.columns([1, 4])
                     with col_a:
@@ -243,7 +251,7 @@ else:
                 st.subheader("Modificar una conexión existente")
                 if "registros" in locals() and registros:
                     opciones_mod = [
-                        f"{obtener_campo(r, 'Caja')} - {obtener_campo(r, 'Conexion')}"
+                        f"{obtener_campo(r, 'caja')} - {obtener_campo(r, 'conexion')}"
                         for r in registros
                     ]
                     seleccion_mod = st.selectbox(
@@ -256,27 +264,27 @@ else:
 
                     mod_tienda = st.text_input(
                         "Tienda:",
-                        value=obtener_campo(registro_actual, "Tienda"),
+                        value=obtener_campo(registro_actual, "tienda"),
                         key="mod_tienda",
                     )
                     mod_store_no = st.text_input(
                         "StoreNo:",
-                        value=obtener_campo(registro_actual, "StoreNo"),
+                        value=obtener_campo(registro_actual, "storeno"),
                         key="mod_store_no",
                     )
                     mod_controlador = st.text_input(
                         "Controlador:",
-                        value=obtener_campo(registro_actual, "Controlador"),
+                        value=obtener_campo(registro_actual, "controlador"),
                         key="mod_controlador",
                     )
                     mod_conexion = st.text_input(
                         "Conexión:",
-                        value=obtener_campo(registro_actual, "Conexion"),
+                        value=obtener_campo(registro_actual, "conexion"),
                         key="mod_conexion",
                     )
                     mod_caja = st.text_input(
                         "Caja:",
-                        value=obtener_campo(registro_actual, "Caja"),
+                        value=obtener_campo(registro_actual, "caja"),
                         key="mod_caja",
                     )
 
@@ -297,7 +305,7 @@ else:
                 st.subheader("Eliminar una conexión")
                 if "registros" in locals() and registros:
                     opciones_del = [
-                        f"{obtener_campo(r, 'Caja')} - {obtener_campo(r, 'Conexion')}"
+                        f"{obtener_campo(r, 'caja')} - {obtener_campo(r, 'conexion')}"
                         for r in registros
                     ]
                     seleccion_del = st.selectbox(
