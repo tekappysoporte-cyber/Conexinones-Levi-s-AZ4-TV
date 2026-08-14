@@ -5,7 +5,7 @@ import json
 st.set_page_config(page_title="Conexiones Levi's", page_icon="👖", layout="wide")
 
 # Clave de acceso
-PASSWORD = "Levis2024"
+PASSWORD = "Zamvoo_Soporte"
 
 # Cargar datos desde JSON local
 @st.cache_data
