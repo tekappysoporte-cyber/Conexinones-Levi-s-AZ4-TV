@@ -101,7 +101,8 @@ else:
             st.markdown("---")
             st.subheader("⭐ Conexión Principal")
 
-            col1, col2, col3 = st.columns([1.5, 2, 1.2])
+            # Ahora dividimos en 4 columnas (incluyendo StoreNo)
+            col1, col2, col3, col4 = st.columns([1.5, 2, 1.2, 1])
 
             with col1:
                 st.caption("Tienda")
@@ -114,6 +115,12 @@ else:
             with col3:
                 st.caption("Tipo de Caja")
                 st.markdown(f"## Caja {principal['caja']}")
+
+            with col4:
+                st.caption("StoreNo")
+                # Muestra el número de tienda o "N/A" si aún no existe en ese registro
+                store_no_val = principal.get("store_no", "N/A")
+                st.markdown(f"## {store_no_val}")
 
             # --- OTRAS CONEXIONES DISPONIBLES ---
             if secundarias:
@@ -132,7 +139,7 @@ else:
                     unsafe_allow_html=True,
                 )
 
-                # Filas alineadas con botón nativo de copia cada una
+                # Filas alineadas con botón nativo de copia
                 for item in secundarias:
                     col_a, col_b = st.columns([1, 4])
                     with col_a:
@@ -153,6 +160,7 @@ else:
             with tab1:
                 st.subheader("Agregar una nueva conexión")
                 nueva_tienda = st.text_input("Nombre de la Tienda:")
+                nuevo_store_no = st.text_input("Número de Tienda (StoreNo):")
                 nueva_conexion = st.text_input(
                     "Código de Conexión (ej: PCLO...):"
                 )
@@ -162,6 +170,7 @@ else:
                     if nueva_tienda and nueva_conexion and nueva_caja:
                         nuevo_registro = {
                             "tienda": nueva_tienda.strip(),
+                            "store_no": nuevo_store_no.strip(),
                             "conexion": nueva_conexion.strip(),
                             "caja": nueva_caja.strip(),
                         }
@@ -169,7 +178,7 @@ else:
                         guardar_datos(datos)
                         st.rerun()
                     else:
-                        st.warning("Por favor completa todos los campos.")
+                        st.warning("Por favor completa los campos requeridos (Tienda, Conexión y Caja).")
 
             # TAB 2: MODIFICAR
             with tab2:
@@ -188,19 +197,23 @@ else:
                     ]
 
                     mod_tienda = st.text_input(
-                        "Tienda:", value=registro_actual["tienda"]
+                        "Tienda:", value=registro_actual.get("tienda", "")
+                    )
+                    mod_store_no = st.text_input(
+                        "StoreNo:", value=str(registro_actual.get("store_no", ""))
                     )
                     mod_conexion = st.text_input(
-                        "Conexión:", value=registro_actual["conexion"]
+                        "Conexión:", value=registro_actual.get("conexion", "")
                     )
                     mod_caja = st.text_input(
-                        "Caja:", value=registro_actual["caja"]
+                        "Caja:", value=registro_actual.get("caja", "")
                     )
 
                     if st.button("Actualizar Conexión"):
                         idx = datos.index(registro_actual)
                         datos[idx] = {
                             "tienda": mod_tienda.strip(),
+                            "store_no": mod_store_no.strip(),
                             "conexion": mod_conexion.strip(),
                             "caja": mod_caja.strip(),
                         }
