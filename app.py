@@ -1,5 +1,4 @@
 import json
-import pandas as pd
 import streamlit as st
 
 # Configuración de la página
@@ -35,7 +34,7 @@ def guardar_datos(datos):
 if "autenticado" not in st.session_state:
     st.session_state.autenticado = False
 
-# Inicializar estado de tienda seleccionada si no existe
+# Estado para controlar la tienda seleccionada
 if "tienda_sel" not in st.session_state:
     st.session_state["tienda_sel"] = None
 
@@ -68,7 +67,6 @@ else:
         # --- BUSCADOR Y BOTÓN LIMPIAR ---
         col_busqueda, col_limpiar = st.columns([4, 1])
 
-        # Determinar índice actual para el selectbox
         idx_tienda = None
         if (
             st.session_state["tienda_sel"]
@@ -84,12 +82,11 @@ else:
                 placeholder="Selecciona una tienda...",
                 key="box_tienda",
             )
-            # Guardar selección en el session state
             st.session_state["tienda_sel"] = tienda_seleccionada
 
         with col_limpiar:
             st.write("")
-            st.write("")  # Alineación con el input
+            st.write("")  # Alineación
             if st.button("🧹 Limpiar Búsqueda"):
                 st.session_state["tienda_sel"] = None
                 if "box_tienda" in st.session_state:
@@ -121,7 +118,6 @@ else:
                 st.markdown(f"## {principal['tienda']}")
 
             with col2:
-                # 🏷️ CAMBIO REALIZADO: Ahora dice "Conexión TV"
                 st.caption("Conexión TV")
                 st.code(principal["conexion"], language="")
 
@@ -134,22 +130,25 @@ else:
                 st.markdown("---")
                 st.subheader("📦 Otras Conexiones Disponibles")
 
-                df_secundarias = pd.DataFrame(secundarias)[["caja", "conexion"]]
-                df_secundarias.columns = ["Caja", "Conexión TV"]
+                # Encabezados de tabla
+                c_head1, c_head2 = st.columns([1, 4])
+                with c_head1:
+                    st.caption("**Caja**")
+                with c_head2:
+                    st.caption("**Conexión TV**")
 
-                # 📋 TABLA IDÉNTICA + BOTÓN PARA COPIAR AL PASAR EL CURSOR
-                st.dataframe(
-                    df_secundarias,
-                    use_container_width=True,
-                    hide_index=True,
-                    column_config={
-                        "Conexión TV": st.column_config.TextColumn(
-                            "Conexión TV",
-                            help="Haz clic en el icono para copiar el código",
-                            copy_to_clipboard=True,  # Habilita el botón nativo de copiar en la tabla
-                        )
-                    },
+                st.markdown(
+                    "<hr style='margin: 0 0 10px 0; border: 0.5px solid #333;'>",
+                    unsafe_allow_html=True,
                 )
+
+                # Filas alineadas con botón nativo de copia cada una
+                for item in secundarias:
+                    col_a, col_b = st.columns([1, 4])
+                    with col_a:
+                        st.markdown(f"**{item['caja']}**")
+                    with col_b:
+                        st.code(item["conexion"], language="")
 
         # --- PANEL DE ADMINISTRACIÓN ---
         st.markdown("---")
