@@ -1,0 +1,22 @@
+[
+    {
+        "tienda": "Levis Arauco Maipu",
+        "conexion": "PCLO4000011101O",
+        "caja": "C1"
+    },
+    {
+        "tienda": "Levis Arauco Maipu",
+        "conexion": "PCLO4000011102O",
+        "caja": "C2"
+    },
+    {
+        "tienda": "Levis Alto Las Condes",
+        "conexion": "PCLO4000012501O",
+        "caja": "MAIN"
+    },
+    {
+        "tienda": "Levis Alto Las Condes",
+        "conexion": "PCLO4000012502O",
+        "caja": "C1"
+    }
+]
