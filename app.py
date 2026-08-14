@@ -101,8 +101,8 @@ else:
             st.markdown("---")
             st.subheader("⭐ Conexión Principal")
 
-            # Ahora dividimos en 4 columnas (incluyendo StoreNo)
-            col1, col2, col3, col4 = st.columns([1.5, 2, 1.2, 1])
+            # Dividimos en 5 columnas: Tienda | Conexión TV | Caja | StoreNo | Controlador
+            col1, col2, col3, col4, col5 = st.columns([1.5, 2, 1.2, 1, 1.2])
 
             with col1:
                 st.caption("Tienda")
@@ -118,9 +118,13 @@ else:
 
             with col4:
                 st.caption("StoreNo")
-                # Muestra el número de tienda o "N/A" si aún no existe en ese registro
                 store_no_val = principal.get("store_no", "N/A")
-                st.markdown(f"## {store_no_val}")
+                st.markdown(f"## {store_no_val if store_no_val else 'N/A'}")
+
+            with col5:
+                st.caption("Controlador")
+                controlador_val = principal.get("controlador", "N/A")
+                st.markdown(f"## {controlador_val if controlador_val else 'N/A'}")
 
             # --- OTRAS CONEXIONES DISPONIBLES ---
             if secundarias:
@@ -161,6 +165,7 @@ else:
                 st.subheader("Agregar una nueva conexión")
                 nueva_tienda = st.text_input("Nombre de la Tienda:")
                 nuevo_store_no = st.text_input("Número de Tienda (StoreNo):")
+                nuevo_controlador = st.text_input("Controlador:")
                 nueva_conexion = st.text_input(
                     "Código de Conexión (ej: PCLO...):"
                 )
@@ -171,6 +176,7 @@ else:
                         nuevo_registro = {
                             "tienda": nueva_tienda.strip(),
                             "store_no": nuevo_store_no.strip(),
+                            "controlador": nuevo_controlador.strip(),
                             "conexion": nueva_conexion.strip(),
                             "caja": nueva_caja.strip(),
                         }
@@ -202,6 +208,9 @@ else:
                     mod_store_no = st.text_input(
                         "StoreNo:", value=str(registro_actual.get("store_no", ""))
                     )
+                    mod_controlador = st.text_input(
+                        "Controlador:", value=str(registro_actual.get("controlador", ""))
+                    )
                     mod_conexion = st.text_input(
                         "Conexión:", value=registro_actual.get("conexion", "")
                     )
@@ -214,6 +223,7 @@ else:
                         datos[idx] = {
                             "tienda": mod_tienda.strip(),
                             "store_no": mod_store_no.strip(),
+                            "controlador": mod_controlador.strip(),
                             "conexion": mod_conexion.strip(),
                             "caja": mod_caja.strip(),
                         }
