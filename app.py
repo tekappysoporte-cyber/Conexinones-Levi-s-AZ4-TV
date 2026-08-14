@@ -6,7 +6,7 @@ import pandas as pd
 st.set_page_config(page_title="Conexiones Levi's", page_icon="👖", layout="wide")
 
 # Clave de acceso
-PASSWORD = "Levis2024"
+PASSWORD = "Zamvoo_Soporte"
 
 # Cargar datos
 @st.cache_data
