@@ -40,20 +40,21 @@ def limpiar_busqueda():
     st.session_state["box_tienda"] = None
 
 
-# FUNCIÓN AG NÓSTICA DE CLAVES (Resuelve cualquier variación de mayúsculas/guiones)
+# FUNCIÓN AG NÓSTICA DE CLAVES ULTRA ROBUSTA
 def obtener_valor_flexible(diccionario, clave_objetivo):
     """Busca un valor en el diccionario ignorando mayúsculas, minúsculas, espacios y guiones bajos."""
     if not diccionario or not isinstance(diccionario, dict):
         return ""
-    
-    # Normalizamos la clave objetivo (ej: "storeno")
+
     objetivo_norm = clave_objetivo.lower().replace("_", "").replace(" ", "")
-    
+
     for k, v in diccionario.items():
         k_norm = str(k).lower().replace("_", "").replace(" ", "")
         if k_norm == objetivo_norm:
-            if v is not None and str(v).strip() != "":
-                return str(v).strip()
+            if v is not None:
+                val_str = str(v).strip()
+                if val_str != "":
+                    return val_str
     return ""
 
 
@@ -107,7 +108,7 @@ else:
 
         with col_limpiar:
             st.write("")
-            st.write("")  # Alineación vertical
+            st.write("")
             st.button("🧹 Limpiar Búsqueda", on_click=limpiar_busqueda)
 
         if tienda_seleccionada:
@@ -117,7 +118,7 @@ else:
                 if obtener_valor_flexible(d, "tienda") == tienda_seleccionada
             ]
 
-            # Selección de Conexión Principal (Prioridad a MAIN / MAIN1)
+            # Selección de Conexión Principal
             principal = next(
                 (
                     d
@@ -128,23 +129,26 @@ else:
             )
             secundarias = [d for d in registros if d != principal]
 
-            # Búsqueda global de StoreNo y Controlador en cualquier registro de la tienda
-            store_no_val = "N/A"
-            controlador_val = "N/A"
+            # Búsqueda de StoreNo y Controlador entre TODOS los registros de esta tienda
+            store_no_val = None
+            controlador_val = None
 
-            for reg in [principal] + secundarias:
-                s_val = obtener_valor_flexible(reg, "storeno")
-                c_val = obtener_valor_flexible(reg, "controlador")
-                if s_val and store_no_val == "N/A":
-                    store_no_val = s_val
-                if c_val and controlador_val == "N/A":
-                    controlador_val = c_val
+            for reg in registros:
+                s = obtener_valor_flexible(reg, "storeno")
+                c = obtener_valor_flexible(reg, "controlador")
+                if s and not store_no_val:
+                    store_no_val = s
+                if c and not controlador_val:
+                    controlador_val = c
+
+            # Si después de recorrer sigue sin valor, se asigna "N/A"
+            final_store_no = store_no_val if store_no_val else "N/A"
+            final_controlador = controlador_val if controlador_val else "N/A"
 
             # --- CONEXIÓN PRINCIPAL ---
             st.markdown("---")
             st.subheader("⭐ Conexión Principal")
 
-            # 5 columnas: Tienda | Conexión TV | Caja | StoreNo | Controlador
             col1, col2, col3, col4, col5 = st.columns([1.5, 2, 1.2, 1, 1.2])
 
             nombre_tienda = obtener_valor_flexible(principal, "tienda")
@@ -161,22 +165,25 @@ else:
 
             with col3:
                 st.caption("Tipo de Caja")
-                st.markdown(f"## Caja {caja_val}")
+                st.markdown(
+                    f"## Caja {caja_val}"
+                    if not caja_val.upper().startswith("CAJA")
+                    else f"## {caja_val}"
+                )
 
             with col4:
                 st.caption("StoreNo")
-                st.markdown(f"## {store_no_val}")
+                st.markdown(f"## {final_store_no}")
 
             with col5:
                 st.caption("Controlador")
-                st.markdown(f"## {controlador_val}")
+                st.markdown(f"## {final_controlador}")
 
             # --- OTRAS CONEXIONES DISPONIBLES ---
             if secundarias:
                 st.markdown("---")
                 st.subheader("📦 Otras Conexiones Disponibles")
 
-                # Encabezados de tabla
                 c_head1, c_head2 = st.columns([1, 4])
                 with c_head1:
                     st.caption("**Caja**")
