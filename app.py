@@ -9,7 +9,7 @@ st.set_page_config(page_title="Gestor de Conexiones Levi's", layout="wide", page
 # CONFIGURACIÓN DE CONTRASEÑA
 # ==========================================
 # Cambia 'Levis2024' por la contraseña que quieras compartir con tus compañeros
-CLAVE_ACCESO = "Levis2024"
+CLAVE_ACCESO = "Zamvoo_Soporte"
 
 if "autenticado" not in st.session_state:
     st.session_state.autenticado = False
