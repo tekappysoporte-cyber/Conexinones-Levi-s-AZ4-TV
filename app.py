@@ -51,6 +51,17 @@ def get_val(reg, campo_objetivo):
     return ""
 
 
+# Función para ordenar registros por tipo de caja de forma lógica
+def ordenar_registros(registros):
+    def clave_orden(reg):
+        caja = get_val(reg, "caja").upper()
+        if caja in ["MAIN", "MAIN1"]:
+            return (0, caja)
+        return (1, caja)
+
+    return sorted(registros, key=clave_orden)
+
+
 # --- PANTALLA DE LOGIN ---
 if not st.session_state.autenticado:
     st.title("🔒 Control de Acceso a Conexiones LV AZ4")
@@ -100,9 +111,10 @@ else:
             st.button("🧹 Limpiar Búsqueda", on_click=limpiar_busqueda)
 
         if tienda_seleccionada:
-            registros = [
+            registros_raw = [
                 d for d in datos if get_val(d, "tienda") == tienda_seleccionada
             ]
+            registros = ordenar_registros(registros_raw)
 
             # Selección de Conexión Principal
             principal = next(
@@ -224,6 +236,8 @@ else:
                             "Caja": nueva_caja.strip(),
                         }
                         datos.append(nuevo_registro)
+                        # Ordenar la lista completa tras agregar
+                        datos = ordenar_registros(datos)
                         guardar_datos(datos)
                         st.rerun()
                     else:
@@ -282,30 +296,50 @@ else:
                             "Conexion": mod_conexion.strip(),
                             "Caja": mod_caja.strip(),
                         }
+                        datos = ordenar_registros(datos)
                         guardar_datos(datos)
                         st.rerun()
-
-            # TAB 3: ELIMINAR
-            with tab3:
-                st.subheader("Eliminar una conexión")
-                if "registros" in locals() and registros:
-                    opciones_del = [
-                        f"{get_val(r, 'caja')} - {get_val(r, 'conexion')}"
-                        for r in registros
-                    ]
-                    seleccion_del = st.selectbox(
-                        "Selecciona la caja a eliminar de la tienda actual:",
-                        opciones_del,
-                        key="del_sel_box",
+                else:
+                    st.info(
+                        "Selecciona una tienda arriba en el buscador para modificar sus conexiones."
                     )
 
-                    registro_a_eliminar = registros[opciones_del.index(seleccion_del)]
+            # TAB 3: ELIMINAR (Independiente de la selección superior)
+            with tab3:
+                st.subheader("Eliminar una conexión")
+                tienda_del = st.selectbox(
+                    "Selecciona la tienda:",
+                    tiendas,
+                    index=None,
+                    placeholder="Elige una tienda para eliminar...",
+                    key="del_tienda_sel",
+                )
 
-                    if st.button(
-                        "❌ Eliminar Conexión Definitivamente",
-                        type="primary",
-                        key="btn_del",
-                    ):
-                        datos.remove(registro_a_eliminar)
-                        guardar_datos(datos)
-                        st.rerun()
+                if tienda_del:
+                    regs_del = [
+                        d for d in datos if get_val(d, "tienda") == tienda_del
+                    ]
+                    regs_del = ordenar_registros(regs_del)
+
+                    opciones_del = [
+                        f"Caja: {get_val(r, 'caja')} | Conexión: {get_val(r, 'conexion')}"
+                        for r in regs_del
+                    ]
+                    seleccion_del = st.selectbox(
+                        "Selecciona la caja/conexión específica a eliminar:",
+                        opciones_del,
+                        key="del_conexion_sel",
+                    )
+
+                    if seleccion_del:
+                        idx_sel = opciones_del.index(seleccion_del)
+                        registro_a_eliminar = regs_del[idx_sel]
+
+                        if st.button(
+                            "❌ Eliminar Conexión Definitivamente",
+                            type="primary",
+                            key="btn_del",
+                        ):
+                            datos.remove(registro_a_eliminar)
+                            guardar_datos(datos)
+                            st.rerun()
