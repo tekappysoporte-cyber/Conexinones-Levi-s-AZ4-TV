@@ -129,21 +129,27 @@ else:
             )
             secundarias = [d for d in registros if d != principal]
 
-            # Búsqueda de StoreNo y Controlador entre TODOS los registros de esta tienda
-            store_no_val = None
-            controlador_val = None
+            # -------------------------------------------------------------
+            # BÚSQUEDA GLOBAL DE StoreNo Y Controlador EN TODA LA TIENDA
+            # -------------------------------------------------------------
+            store_no_encontrado = ""
+            controlador_encontrado = ""
 
             for reg in registros:
-                s = obtener_valor_flexible(reg, "storeno")
-                c = obtener_valor_flexible(reg, "controlador")
-                if s and not store_no_val:
-                    store_no_val = s
-                if c and not controlador_val:
-                    controlador_val = c
+                val_s = obtener_valor_flexible(reg, "storeno")
+                val_c = obtener_valor_flexible(reg, "controlador")
 
-            # Si después de recorrer sigue sin valor, se asigna "N/A"
-            final_store_no = store_no_val if store_no_val else "N/A"
-            final_controlador = controlador_val if controlador_val else "N/A"
+                if val_s and not store_no_encontrado:
+                    store_no_encontrado = val_s
+
+                if val_c and not controlador_encontrado:
+                    controlador_encontrado = val_c
+
+            # Asignación final: Si no se encontró valor válido en ningún registro, se deja N/A
+            final_store_no = store_no_encontrado if store_no_encontrado else "N/A"
+            final_controlador = (
+                controlador_encontrado if controlador_encontrado else "N/A"
+            )
 
             # --- CONEXIÓN PRINCIPAL ---
             st.markdown("---")
