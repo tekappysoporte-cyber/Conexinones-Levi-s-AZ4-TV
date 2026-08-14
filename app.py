@@ -1,5 +1,6 @@
 import streamlit as st
 import json
+import pandas as pd
 
 # Configuración de la página
 st.set_page_config(page_title="Conexiones Levi's", page_icon="👖", layout="wide")
@@ -41,15 +42,40 @@ if not st.session_state.autenticado:
         else:
             st.error("Contraseña incorrecta. Inténtalo de nuevo.")
 else:
-    # --- APLICACIÓN PRINCIPAL ---
-    st.title("👖 Buscador de Conexiones Levi's")
+    # --- CABECERA Y BOTÓN CERRAR SESIÓN ---
+    col_titulo, col_logout = st.columns([5, 1])
+    with col_titulo:
+        st.title("👖 Buscador de Conexiones Levi's")
+    with col_logout:
+        st.write("") # Espaciado
+        if st.button("🚪 Cerrar Sesión"):
+            st.session_state.autenticado = False
+            if "tienda_seleccionada" in st.session_state:
+                del st.session_state["tienda_seleccionada"]
+            st.rerun()
 
     datos = cargar_datos()
 
     if datos:
-        # Selector de Tienda
         tiendas = sorted(list(set(d["tienda"] for d in datos)))
-        tienda_seleccionada = st.selectbox("🔎 Selecciona o escribe el nombre de la tienda:", tiendas)
+        
+        # --- BUSCADOR Y BOTÓN LIMPIAR ---
+        col_busqueda, col_limpiar = st.columns([4, 1])
+        
+        with col_busqueda:
+            tienda_seleccionada = st.selectbox(
+                "🔎 Selecciona o escribe el nombre de la tienda:", 
+                tiendas,
+                key="tienda_seleccionada"
+            )
+        
+        with col_limpiar:
+            st.write("")
+            st.write("") # Alineación vertical con la caja de búsqueda
+            if st.button("🧹 Limpiar Búsqueda"):
+                if "tienda_seleccionada" in st.session_state:
+                    del st.session_state["tienda_seleccionada"]
+                st.rerun()
 
         if tienda_seleccionada:
             registros = [d for d in datos if d["tienda"] == tienda_seleccionada]
@@ -74,28 +100,19 @@ else:
                 st.caption("Tipo de Caja")
                 st.markdown(f"## Caja {principal['caja']}")
 
-            # --- OTRAS CONEXIONES DISPONIBLES (Formato Limpio + Botón Copiar) ---
+            # --- OTRAS CONEXIONES DISPONIBLES (Tabla Nativa idéntica a tu imagen) ---
             if secundarias:
                 st.markdown("---")
                 st.subheader("📦 Otras Conexiones Disponibles")
                 
-                # Encabezados de la tabla
-                c_head1, c_head2 = st.columns([1, 4])
-                with c_head1:
-                    st.caption("**Caja**")
-                with c_head2:
-                    st.caption("**Código de Conexión**")
+                df_secundarias = pd.DataFrame(secundarias)[["caja", "conexion"]]
+                df_secundarias.columns = ["Caja", "Código de Conexión"]
                 
-                st.markdown("<hr style='margin: 0 0 10px 0; border: 0.5px solid #333;'>", unsafe_allow_html=True)
-
-                # Filas de la tabla con botón de copia
-                for item in secundarias:
-                    col_a, col_b = st.columns([1, 4])
-                    with col_a:
-                        st.markdown(f"**{item['caja']}**")
-                    with col_b:
-                        # Cuadro interactivo con icono de copiar integrado
-                        st.code(item['conexion'], language="")
+                st.dataframe(
+                    df_secundarias, 
+                    use_container_width=True, 
+                    hide_index=True
+                )
 
         # --- PANEL DE ADMINISTRACIÓN ---
         st.markdown("---")
