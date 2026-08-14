@@ -64,7 +64,8 @@ else:
     datos = cargar_datos()
 
     if datos:
-        tiendas = sorted(list(set(d["tienda"] for d in datos)))
+        # Búsqueda dinámica de la clave de tienda (por si en alguna fila es 'tienda' o 'Tienda')
+        tiendas = sorted(list(set(d.get("tienda") or d.get("Tienda") for d in datos if (d.get("tienda") or d.get("Tienda")))))
 
         # --- BUSCADOR Y BOTÓN LIMPIAR ---
         col_busqueda, col_limpiar = st.columns([4, 1])
@@ -85,13 +86,14 @@ else:
 
         if tienda_seleccionada:
             registros = [
-                d for d in datos if d["tienda"] == tienda_seleccionada
+                d for d in datos if (d.get("tienda") == tienda_seleccionada or d.get("Tienda") == tienda_seleccionada)
             ]
+            
             principal = next(
                 (
                     d
                     for d in registros
-                    if d["caja"].upper() in ["MAIN", "MAIN1"]
+                    if str(d.get("caja") or d.get("Caja") or "").upper() in ["MAIN", "MAIN1"]
                 ),
                 registros[0],
             )
@@ -104,27 +106,47 @@ else:
             # 5 columnas: Tienda | Conexión TV | Caja | StoreNo | Controlador
             col1, col2, col3, col4, col5 = st.columns([1.5, 2, 1.2, 1, 1.2])
 
+            # Helpers de obtención tolerante de datos
+            nombre_tienda = principal.get("tienda") or principal.get("Tienda") or ""
+            conexion_tv = principal.get("conexion") or principal.get("Conexion") or principal.get("Conexión") or ""
+            caja_val = principal.get("caja") or principal.get("Caja") or ""
+
+            # Búsqueda de variaciones de StoreNo
+            store_no_val = (
+                principal.get("store_no") or 
+                principal.get("StoreNo") or 
+                principal.get("STORE NO") or 
+                principal.get("Store NO") or 
+                ""
+            )
+
+            # Búsqueda de variaciones de Controlador
+            controlador_val = (
+                principal.get("controlador") or 
+                principal.get("Controlador") or 
+                principal.get("CONTROLADOR") or 
+                ""
+            )
+
             with col1:
                 st.caption("Tienda")
-                st.markdown(f"## {principal['tienda']}")
+                st.markdown(f"## {nombre_tienda}")
 
             with col2:
                 st.caption("Conexión TV")
-                st.code(principal["conexion"], language="")
+                st.code(conexion_tv, language="")
 
             with col3:
                 st.caption("Tipo de Caja")
-                st.markdown(f"## Caja {principal['caja']}")
+                st.markdown(f"## Caja {caja_val}")
 
             with col4:
                 st.caption("StoreNo")
-                store_no_val = principal.get("store_no", "N/A")
-                st.markdown(f"## {store_no_val if store_no_val else 'N/A'}")
+                st.markdown(f"## {str(store_no_val).strip() if str(store_no_val).strip() else 'N/A'}")
 
             with col5:
                 st.caption("Controlador")
-                controlador_val = principal.get("controlador", "N/A")
-                st.markdown(f"## {controlador_val if controlador_val else 'N/A'}")
+                st.markdown(f"## {str(controlador_val).strip() if str(controlador_val).strip() else 'N/A'}")
 
             # --- OTRAS CONEXIONES DISPONIBLES ---
             if secundarias:
@@ -145,11 +167,14 @@ else:
 
                 # Filas alineadas con botón nativo de copia
                 for item in secundarias:
+                    caja_sec = item.get("caja") or item.get("Caja") or ""
+                    conexion_sec = item.get("conexion") or item.get("Conexion") or item.get("Conexión") or ""
+                    
                     col_a, col_b = st.columns([1, 4])
                     with col_a:
-                        st.markdown(f"**{item['caja']}**")
+                        st.markdown(f"**{caja_sec}**")
                     with col_b:
-                        st.code(item["conexion"], language="")
+                        st.code(conexion_sec, language="")
 
         # --- PANEL DE ADMINISTRACIÓN ---
         st.markdown("---")
@@ -189,7 +214,7 @@ else:
                 st.subheader("Modificar una conexión existente")
                 if "registros" in locals() and registros:
                     opciones_mod = [
-                        f"{r['caja']} - {r['conexion']}" for r in registros
+                        f"{r.get('caja') or r.get('Caja')} - {r.get('conexion') or r.get('Conexion')}" for r in registros
                     ]
                     seleccion_mod = st.selectbox(
                         "Selecciona la caja a modificar de la tienda actual:",
@@ -201,20 +226,27 @@ else:
                         opciones_mod.index(seleccion_mod)
                     ]
 
+                    # Extracción con fallback a diferentes formatos
+                    val_tienda = registro_actual.get("tienda") or registro_actual.get("Tienda") or ""
+                    val_store_no = registro_actual.get("store_no") or registro_actual.get("StoreNo") or registro_actual.get("STORE NO") or ""
+                    val_controlador = registro_actual.get("controlador") or registro_actual.get("Controlador") or ""
+                    val_conexion = registro_actual.get("conexion") or registro_actual.get("Conexion") or ""
+                    val_caja = registro_actual.get("caja") or registro_actual.get("Caja") or ""
+
                     mod_tienda = st.text_input(
-                        "Tienda:", value=registro_actual.get("tienda", ""), key="mod_tienda"
+                        "Tienda:", value=val_tienda, key="mod_tienda"
                     )
                     mod_store_no = st.text_input(
-                        "StoreNo:", value=str(registro_actual.get("store_no", "")), key="mod_store_no"
+                        "StoreNo:", value=str(val_store_no), key="mod_store_no"
                     )
                     mod_controlador = st.text_input(
-                        "Controlador:", value=str(registro_actual.get("controlador", "")), key="mod_controlador"
+                        "Controlador:", value=str(val_controlador), key="mod_controlador"
                     )
                     mod_conexion = st.text_input(
-                        "Conexión:", value=registro_actual.get("conexion", ""), key="mod_conexion"
+                        "Conexión:", value=val_conexion, key="mod_conexion"
                     )
                     mod_caja = st.text_input(
-                        "Caja:", value=registro_actual.get("caja", ""), key="mod_caja"
+                        "Caja:", value=val_caja, key="mod_caja"
                     )
 
                     if st.button("Actualizar Conexión", key="btn_mod"):
@@ -234,7 +266,7 @@ else:
                 st.subheader("Eliminar una conexión")
                 if "registros" in locals() and registros:
                     opciones_del = [
-                        f"{r['caja']} - {r['conexion']}" for r in registros
+                        f"{r.get('caja') or r.get('Caja')} - {r.get('conexion') or r.get('Conexion')}" for r in registros
                     ]
                     seleccion_del = st.selectbox(
                         "Selecciona la caja a eliminar de la tienda actual:",
