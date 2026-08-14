@@ -34,9 +34,27 @@ def guardar_datos(datos):
 if "autenticado" not in st.session_state:
     st.session_state.autenticado = False
 
+
 # Función callback para limpiar el buscador
 def limpiar_busqueda():
     st.session_state["box_tienda"] = None
+
+
+# FUNCIÓN AG NÓSTICA DE CLAVES (Resuelve cualquier variación de mayúsculas/guiones)
+def obtener_valor_flexible(diccionario, clave_objetivo):
+    """Busca un valor en el diccionario ignorando mayúsculas, minúsculas, espacios y guiones bajos."""
+    if not diccionario or not isinstance(diccionario, dict):
+        return ""
+    
+    # Normalizamos la clave objetivo (ej: "storeno")
+    objetivo_norm = clave_objetivo.lower().replace("_", "").replace(" ", "")
+    
+    for k, v in diccionario.items():
+        k_norm = str(k).lower().replace("_", "").replace(" ", "")
+        if k_norm == objetivo_norm:
+            if v is not None and str(v).strip() != "":
+                return str(v).strip()
+    return ""
 
 
 if not st.session_state.autenticado:
@@ -65,7 +83,15 @@ else:
 
     if datos:
         # Extraer tiendas de forma limpia
-        tiendas = sorted(list(set(d.get("tienda") or d.get("Tienda") for d in datos if (d.get("tienda") or d.get("Tienda")))))
+        tiendas = sorted(
+            list(
+                set(
+                    obtener_valor_flexible(d, "tienda")
+                    for d in datos
+                    if obtener_valor_flexible(d, "tienda")
+                )
+            )
+        )
 
         # --- BUSCADOR Y BOTÓN LIMPIAR ---
         col_busqueda, col_limpiar = st.columns([4, 1])
@@ -86,35 +112,33 @@ else:
 
         if tienda_seleccionada:
             registros = [
-                d for d in datos if (d.get("tienda") == tienda_seleccionada or d.get("Tienda") == tienda_seleccionada)
+                d
+                for d in datos
+                if obtener_valor_flexible(d, "tienda") == tienda_seleccionada
             ]
-            
+
             # Selección de Conexión Principal (Prioridad a MAIN / MAIN1)
             principal = next(
                 (
                     d
                     for d in registros
-                    if str(d.get("caja") or d.get("Caja") or "").upper() in ["MAIN", "MAIN1"]
+                    if obtener_valor_flexible(d, "caja").upper() in ["MAIN", "MAIN1"]
                 ),
                 registros[0],
             )
             secundarias = [d for d in registros if d != principal]
 
-            # --- OBTENCIÓN GLOBAL DE STORE NO Y CONTROLADOR PARA LA TIENDA ---
-            # Busca la propiedad en la caja principal o recorre los demás registros de la tienda si no se halla ahí.
-            def buscar_dato_tienda(lista_registros, variantes_claves):
-                for reg in lista_registros:
-                    for k in variantes_claves:
-                        val = reg.get(k)
-                        if val is not None and str(val).strip() != "":
-                            return str(val).strip()
-                return "N/A"
+            # Búsqueda global de StoreNo y Controlador en cualquier registro de la tienda
+            store_no_val = "N/A"
+            controlador_val = "N/A"
 
-            claves_store = ["StoreNo", "store_no", "STORE NO", "Store NO", "storeNo"]
-            claves_controlador = ["Controlador", "controlador", "CONTROLADOR"]
-
-            store_no_val = buscar_dato_tienda([principal] + secundarias, claves_store)
-            controlador_val = buscar_dato_tienda([principal] + secundarias, claves_controlador)
+            for reg in [principal] + secundarias:
+                s_val = obtener_valor_flexible(reg, "storeno")
+                c_val = obtener_valor_flexible(reg, "controlador")
+                if s_val and store_no_val == "N/A":
+                    store_no_val = s_val
+                if c_val and controlador_val == "N/A":
+                    controlador_val = c_val
 
             # --- CONEXIÓN PRINCIPAL ---
             st.markdown("---")
@@ -123,9 +147,9 @@ else:
             # 5 columnas: Tienda | Conexión TV | Caja | StoreNo | Controlador
             col1, col2, col3, col4, col5 = st.columns([1.5, 2, 1.2, 1, 1.2])
 
-            nombre_tienda = principal.get("tienda") or principal.get("Tienda") or ""
-            conexion_tv = principal.get("conexion") or principal.get("Conexion") or principal.get("Conexión") or ""
-            caja_val = principal.get("caja") or principal.get("Caja") or ""
+            nombre_tienda = obtener_valor_flexible(principal, "tienda")
+            conexion_tv = obtener_valor_flexible(principal, "conexion")
+            caja_val = obtener_valor_flexible(principal, "caja")
 
             with col1:
                 st.caption("Tienda")
@@ -164,11 +188,10 @@ else:
                     unsafe_allow_html=True,
                 )
 
-                # Filas alineadas con botón nativo de copia
                 for item in secundarias:
-                    caja_sec = item.get("caja") or item.get("Caja") or ""
-                    conexion_sec = item.get("conexion") or item.get("Conexion") or item.get("Conexión") or ""
-                    
+                    caja_sec = obtener_valor_flexible(item, "caja")
+                    conexion_sec = obtener_valor_flexible(item, "conexion")
+
                     col_a, col_b = st.columns([1, 4])
                     with col_a:
                         st.markdown(f"**{caja_sec}**")
@@ -188,9 +211,15 @@ else:
             with tab1:
                 st.subheader("Agregar una nueva conexión")
                 nueva_tienda = st.text_input("Nombre de la Tienda:", key="add_tienda")
-                nuevo_store_no = st.text_input("Número de Tienda (StoreNo):", key="add_store_no")
-                nuevo_controlador = st.text_input("Controlador:", key="add_controlador")
-                nueva_conexion = st.text_input("Código de Conexión (ej: PCLO...):", key="add_conexion")
+                nuevo_store_no = st.text_input(
+                    "Número de Tienda (StoreNo):", key="add_store_no"
+                )
+                nuevo_controlador = st.text_input(
+                    "Controlador:", key="add_controlador"
+                )
+                nueva_conexion = st.text_input(
+                    "Código de Conexión (ej: PCLO...):", key="add_conexion"
+                )
                 nueva_caja = st.text_input("Caja (ej: MAIN, C1, C2):", key="add_caja")
 
                 if st.button("Guardar Nueva Conexión", key="btn_add"):
@@ -206,45 +235,50 @@ else:
                         guardar_datos(datos)
                         st.rerun()
                     else:
-                        st.warning("Por favor completa los campos requeridos (Tienda, Conexión y Caja).")
+                        st.warning(
+                            "Por favor completa los campos requeridos (Tienda, Conexión y Caja)."
+                        )
 
             # TAB 2: MODIFICAR
             with tab2:
                 st.subheader("Modificar una conexión existente")
                 if "registros" in locals() and registros:
                     opciones_mod = [
-                        f"{r.get('caja') or r.get('Caja')} - {r.get('conexion') or r.get('Conexion')}" for r in registros
+                        f"{obtener_valor_flexible(r, 'caja')} - {obtener_valor_flexible(r, 'conexion')}"
+                        for r in registros
                     ]
                     seleccion_mod = st.selectbox(
                         "Selecciona la caja a modificar de la tienda actual:",
                         opciones_mod,
-                        key="mod_sel_box"
+                        key="mod_sel_box",
                     )
 
-                    registro_actual = registros[
-                        opciones_mod.index(seleccion_mod)
-                    ]
-
-                    val_tienda = registro_actual.get("tienda") or registro_actual.get("Tienda") or ""
-                    val_store_no = registro_actual.get("store_no") or registro_actual.get("StoreNo") or registro_actual.get("STORE NO") or ""
-                    val_controlador = registro_actual.get("controlador") or registro_actual.get("Controlador") or ""
-                    val_conexion = registro_actual.get("conexion") or registro_actual.get("Conexion") or ""
-                    val_caja = registro_actual.get("caja") or registro_actual.get("Caja") or ""
+                    registro_actual = registros[opciones_mod.index(seleccion_mod)]
 
                     mod_tienda = st.text_input(
-                        "Tienda:", value=val_tienda, key="mod_tienda"
+                        "Tienda:",
+                        value=obtener_valor_flexible(registro_actual, "tienda"),
+                        key="mod_tienda",
                     )
                     mod_store_no = st.text_input(
-                        "StoreNo:", value=str(val_store_no), key="mod_store_no"
+                        "StoreNo:",
+                        value=obtener_valor_flexible(registro_actual, "storeno"),
+                        key="mod_store_no",
                     )
                     mod_controlador = st.text_input(
-                        "Controlador:", value=str(val_controlador), key="mod_controlador"
+                        "Controlador:",
+                        value=obtener_valor_flexible(registro_actual, "controlador"),
+                        key="mod_controlador",
                     )
                     mod_conexion = st.text_input(
-                        "Conexión:", value=val_conexion, key="mod_conexion"
+                        "Conexión:",
+                        value=obtener_valor_flexible(registro_actual, "conexion"),
+                        key="mod_conexion",
                     )
                     mod_caja = st.text_input(
-                        "Caja:", value=val_caja, key="mod_caja"
+                        "Caja:",
+                        value=obtener_valor_flexible(registro_actual, "caja"),
+                        key="mod_caja",
                     )
 
                     if st.button("Actualizar Conexión", key="btn_mod"):
@@ -264,7 +298,8 @@ else:
                 st.subheader("Eliminar una conexión")
                 if "registros" in locals() and registros:
                     opciones_del = [
-                        f"{r.get('caja') or r.get('Caja')} - {r.get('conexion') or r.get('Conexion')}" for r in registros
+                        f"{obtener_valor_flexible(r, 'caja')} - {obtener_valor_flexible(r, 'conexion')}"
+                        for r in registros
                     ]
                     seleccion_del = st.selectbox(
                         "Selecciona la caja a eliminar de la tienda actual:",
@@ -272,12 +307,12 @@ else:
                         key="del_sel_box",
                     )
 
-                    registro_a_eliminar = registros[
-                        opciones_del.index(seleccion_del)
-                    ]
+                    registro_a_eliminar = registros[opciones_del.index(seleccion_del)]
 
                     if st.button(
-                        "❌ Eliminar Conexión Definitivamente", type="primary", key="btn_del"
+                        "❌ Eliminar Conexión Definitivamente",
+                        type="primary",
+                        key="btn_del",
                     ):
                         datos.remove(registro_a_eliminar)
                         guardar_datos(datos)
