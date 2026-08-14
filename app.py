@@ -2,12 +2,14 @@ import json
 import streamlit as st
 
 # Configuración de la página
-st.set_page_config(page_title="Conexiones Levi's", page_icon="👖", layout="wide")
+st.set_page_config(
+    page_title="Conexiones LV AZ4", page_icon="🔒", layout="wide"
+)
 
 PASSWORD = "Zamvoo_Soporte"
 
 
-# Cargar datos SIEMPRE FRESCOS sin caché persistente para evitar bloqueos
+# Cargar datos SIEMPRE FRESCOS
 def cargar_datos():
     try:
         with open("conexiones_datos.json", "r", encoding="utf-8") as f:
@@ -49,8 +51,9 @@ def get_val(reg, campo_objetivo):
     return ""
 
 
+# --- PANTALLA DE LOGIN ---
 if not st.session_state.autenticado:
-    st.title("🔒 Control de Acceso")
+    st.title("🔒 Control de Acceso a Conexiones LV AZ4")
     clave = st.text_input("Ingresa la contraseña para acceder:", type="password")
     if st.button("Ingresar"):
         if clave == PASSWORD:
