@@ -16,14 +16,14 @@
     {
         "Controlador":null,
         "STORE NO":50,
-        "Tienda":"Levis Patio\/Vivo\/Outlet Maipu",
+        "Tienda":"Levis Patio\Vivo\Outlet Maipu",
         "Conexion":"PCLO4000010401O",
         "Caja":"C1"
     },
     {
         "Controlador":null,
         "STORE NO":50,
-        "Tienda":"Levis Patio\/Vivo\/Outlet Maipu",
+        "Tienda":"Levis Patio\Vivo\Outlet Maipu",
         "Conexion":"PCLO4000010402O",
         "Caja":"C2"
     },
@@ -65,35 +65,35 @@
     {
         "Controlador":null,
         "STORE NO":25,
-        "Tienda":"Levi’s Plaza Egaña",
+        "Tienda":"Levis Plaza Egaña",
         "Conexion":"PCLO4000013201O",
         "Caja":"C1"
     },
     {
         "Controlador":null,
         "STORE NO":25,
-        "Tienda":"Levi’s Plaza Egaña",
+        "Tienda":"Levis Plaza Egaña",
         "Conexion":"PCLO4000013202O",
         "Caja":"C2"
     },
     {
         "Controlador":null,
         "STORE NO":25,
-        "Tienda":"Levi’s Plaza Egaña",
+        "Tienda":"Levis Plaza Egaña",
         "Conexion":"PCLO4000013203O",
         "Caja":"C3"
     },
     {
         "Controlador":null,
         "STORE NO":63,
-        "Tienda":"Levi’s Estacion Central",
+        "Tienda":"LevisEstacion Central",
         "Conexion":"PCLO4000014001O",
         "Caja":"C1"
     },
     {
         "Controlador":null,
         "STORE NO":63,
-        "Tienda":"Levi’s Estacion Central",
+        "Tienda":"LevisEstacion Central",
         "Conexion":"PCLO4000014002O",
         "Caja":"C2"
     },
@@ -758,28 +758,28 @@
     {
         "Controlador":null,
         "STORE NO":19,
-        "Tienda":"Levis mall Tobalaba",
+        "Tienda":"Levis Mall Tobalaba",
         "Conexion":"PCLO4000010601O",
         "Caja":"MAIN"
     },
     {
         "Controlador":null,
         "STORE NO":19,
-        "Tienda":"Levis mall Tobalaba",
+        "Tienda":"Levis Mall Tobalaba",
         "Conexion":"PCLO4000010602O",
         "Caja":"C1"
     },
     {
         "Controlador":null,
         "STORE NO":19,
-        "Tienda":"Levis mall Tobalaba",
+        "Tienda":"Levis Mall Tobalaba",
         "Conexion":"PCLO4000010603O",
         "Caja":"C2"
     },
     {
         "Controlador":null,
         "STORE NO":19,
-        "Tienda":"Levis mall Tobalaba",
+        "Tienda":"Levis Mall Tobalaba",
         "Conexion":"PCLO4000010604O",
         "Caja":"C3"
     },
