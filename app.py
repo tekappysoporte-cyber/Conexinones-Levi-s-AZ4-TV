@@ -34,9 +34,10 @@ def guardar_datos(datos):
 if "autenticado" not in st.session_state:
     st.session_state.autenticado = False
 
-# Estado para controlar la tienda seleccionada
-if "tienda_sel" not in st.session_state:
-    st.session_state["tienda_sel"] = None
+# Función callback para limpiar el buscador
+def limpiar_busqueda():
+    st.session_state["box_tienda"] = None
+
 
 if not st.session_state.autenticado:
     st.title("🔒 Control de Acceso")
@@ -56,7 +57,8 @@ else:
         st.write("")
         if st.button("🚪 Cerrar Sesión"):
             st.session_state.autenticado = False
-            st.session_state["tienda_sel"] = None
+            if "box_tienda" in st.session_state:
+                st.session_state["box_tienda"] = None
             st.rerun()
 
     datos = cargar_datos()
@@ -67,31 +69,19 @@ else:
         # --- BUSCADOR Y BOTÓN LIMPIAR ---
         col_busqueda, col_limpiar = st.columns([4, 1])
 
-        idx_tienda = None
-        if (
-            st.session_state["tienda_sel"]
-            and st.session_state["tienda_sel"] in tiendas
-        ):
-            idx_tienda = tiendas.index(st.session_state["tienda_sel"])
-
         with col_busqueda:
             tienda_seleccionada = st.selectbox(
                 "🔎 Selecciona o escribe el nombre de la tienda:",
                 tiendas,
-                index=idx_tienda,
+                index=None,
                 placeholder="Selecciona una tienda...",
                 key="box_tienda",
             )
-            st.session_state["tienda_sel"] = tienda_seleccionada
 
         with col_limpiar:
             st.write("")
-            st.write("")  # Alineación
-            if st.button("🧹 Limpiar Búsqueda"):
-                st.session_state["tienda_sel"] = None
-                if "box_tienda" in st.session_state:
-                    del st.session_state["box_tienda"]
-                st.rerun()
+            st.write("")  # Alineación vertical
+            st.button("🧹 Limpiar Búsqueda", on_click=limpiar_busqueda)
 
         if tienda_seleccionada:
             registros = [
