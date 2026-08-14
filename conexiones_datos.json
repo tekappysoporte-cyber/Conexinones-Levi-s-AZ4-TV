@@ -1,5 +1,5 @@
 [
-  { "Controlador": "", "StoreNo": "37", "Tienda": "Levis Arauco Maipu", "Conexion": "PCLO4000011101O", "Caja": "C1" },
+  { "Controlador": "00", "StoreNo": "37", "Tienda": "Levis Arauco Maipu", "Conexion": "PCLO4000011101O", "Caja": "C1" },
   { "Controlador": "", "StoreNo": "37", "Tienda": "Levis Arauco Maipu", "Conexion": "PCLO4000011102O", "Caja": "C2" },
   { "Controlador": "", "StoreNo": "53", "Tienda": "Levis Patio/Vivo/Outlet Maipu", "Conexion": "PCLO4000010401O", "Caja": "C1" },
   { "Controlador": "", "StoreNo": "53", "Tienda": "Levis Patio/Vivo/Outlet Maipu", "Conexion": "PCLO4000010402O", "Caja": "C2" },
