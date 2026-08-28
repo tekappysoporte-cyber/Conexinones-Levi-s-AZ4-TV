@@ -211,10 +211,12 @@ else:
                 ["➕ Crear Nueva", "✏️ Modificar Existente", "🗑️ Eliminar Conexión"]
             )
 
-            # TAB 1: CREAR
+      # TAB 1: CREAR
             with tab1:
                 st.subheader("Agregar una nueva conexión")
-                nueva_tienda = st.text_input("Nombre de la Tienda:", key="add_tienda")
+                nueva_tienda = st.text_input(
+                    "Nombre de la Tienda:", key="add_tienda"
+                )
                 nuevo_store_no = st.text_input(
                     "Número de Tienda (StoreNo):", key="add_store_no"
                 )
@@ -224,19 +226,30 @@ else:
                 nueva_conexion = st.text_input(
                     "Código de Conexión (ej: PCLO...):", key="add_conexion"
                 )
-                nueva_caja = st.text_input("Caja (ej: MAIN, C1, C2):", key="add_caja")
+                nueva_caja = st.text_input(
+                    "Caja (ej: MAIN, C1, C2):", key="add_caja"
+                )
 
                 if st.button("Guardar Nueva Conexión", key="btn_add"):
-                    if nueva_tienda and nueva_conexion and nueva_caja:
+                    t_val = nueva_tienda.strip() if nueva_tienda else ""
+                    c_val = nueva_conexion.strip() if nueva_conexion else ""
+                    box_val = nueva_caja.strip() if nueva_caja else ""
+
+                    if t_val and c_val and box_val:
                         nuevo_registro = {
-                            "Controlador": nuevo_controlador.strip(),
-                            "StoreNo": nuevo_store_no.strip(),
-                            "Tienda": nueva_tienda.strip(),
-                            "Conexion": nueva_conexion.strip(),
-                            "Caja": nueva_caja.strip(),
+                            "Controlador": (
+                                nuevo_controlador.strip()
+                                if nuevo_controlador
+                                else ""
+                            ),
+                            "StoreNo": (
+                                nuevo_store_no.strip() if nuevo_store_no else ""
+                            ),
+                            "Tienda": t_val,
+                            "Conexion": c_val,
+                            "Caja": box_val,
                         }
                         datos.append(nuevo_registro)
-                        # Ordenar la lista completa tras agregar
                         datos = ordenar_registros(datos)
                         guardar_datos(datos)
                         st.rerun()
