@@ -4,7 +4,7 @@ import streamlit as st
 
 # Configuración de la página
 st.set_page_config(
-    page_title="Conexiones LV AZ4", page_icon="🔒", layout="wide"
+    page_title="Conexiones LV AZ4", page_icon="👖", layout="wide"
 )
 
 RUTA_JSON = "conexiones_datos.json"
