@@ -33,6 +33,22 @@ def limpiar_busqueda():
     st.session_state["box_conexion"] = None
 
 
+# Callbacks para limpiar los otros campos cuando se usa uno específico
+def cambiar_tienda():
+    st.session_state["box_storeno"] = None
+    st.session_state["box_conexion"] = None
+
+
+def cambiar_storeno():
+    st.session_state["box_tienda"] = None
+    st.session_state["box_conexion"] = None
+
+
+def cambiar_conexion():
+    st.session_state["box_tienda"] = None
+    st.session_state["box_storeno"] = None
+
+
 # EXTRAER CUALQUIER VALOR SIN IMPORTAR MAYÚSCULAS/MINÚSCULAS
 def get_val(reg, campo_objetivo):
     if not isinstance(reg, dict):
@@ -86,6 +102,7 @@ if datos:
             index=None,
             placeholder="Selecciona una tienda...",
             key="box_tienda",
+            on_change=cambiar_tienda,
         )
 
     with col_limpiar:
@@ -103,6 +120,7 @@ if datos:
             index=None,
             placeholder="Selecciona StoreNo...",
             key="box_storeno",
+            on_change=cambiar_storeno,
         )
 
     with col_filtro2:
@@ -112,18 +130,19 @@ if datos:
             index=None,
             placeholder="Selecciona conexión...",
             key="box_conexion",
+            on_change=cambiar_conexion,
         )
 
     # Determinar qué tienda mostrar basada en cualquiera de los 3 filtros activos
     tienda_a_mostrar = None
-    if tienda_seleccionada:
-        tienda_a_mostrar = tienda_seleccionada
-    elif storeno_seleccionado:
-        reg_temp = next((d for d in datos if get_val(d, "storeno") == storeno_seleccionado), None)
+    if st.session_state.get("box_tienda"):
+        tienda_a_mostrar = st.session_state["box_tienda"]
+    elif st.session_state.get("box_storeno"):
+        reg_temp = next((d for d in datos if get_val(d, "storeno") == st.session_state["box_storeno"]), None)
         if reg_temp:
             tienda_a_mostrar = get_val(reg_temp, "tienda")
-    elif conexion_seleccionada:
-        reg_temp = next((d for d in datos if get_val(d, "conexion") == conexion_seleccionada), None)
+    elif st.session_state.get("box_conexion"):
+        reg_temp = next((d for d in datos if get_val(d, "conexion") == st.session_state["box_conexion"]), None)
         if reg_temp:
             tienda_a_mostrar = get_val(reg_temp, "tienda")
 
