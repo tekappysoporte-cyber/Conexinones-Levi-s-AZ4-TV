@@ -1146,5 +1146,33 @@
         "Tienda": "Levis Arica",
         "Conexion": "PCLO4000015203O",
         "Caja": "C2"
+    },
+    {
+        "Controlador": "OUT_LACALERA",
+        "StoreNo": 89,
+        "Tienda": "Levis La Calera",
+        "Conexion": "PCLO4000015301O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "OUT_LACALERA",
+        "StoreNo": 89,
+        "Tienda": "Levis La Calera",
+        "Conexion": "PCLO4000015302O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "OUT_LACALERA",
+        "StoreNo": 89,
+        "Tienda": "Levis La Calera",
+        "Conexion": "PCLO4000015303O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "OUT_LACALERA",
+        "StoreNo": 89,
+        "Tienda": "Levis La Calera",
+        "Conexion": "PCLO4000015304O",
+        "Caja": "C3"
     }
 ]
