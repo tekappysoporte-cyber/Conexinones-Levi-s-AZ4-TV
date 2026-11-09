@@ -1174,5 +1174,34 @@
         "Tienda": "Levis La Calera",
         "Conexion": "PCLO4000015304O",
         "Caja": "C3"
+    },
+    {
+        "Controlador": "",
+        "StoreNo": ,
+        "Tienda": "Outlet Espacio Urbano Antofagasta",
+        "Conexion": "PCLO4000015401O",
+        "Caja": "MAIN"
+    },
+    {
+        "Controlador": "",
+        "StoreNo": ,
+        "Tienda": "Outlet Espacio Urbano Antofagasta",
+        "Conexion": "PCLO4000015402O",
+        "Caja": "C1"
+    },
+    {
+        "Controlador": "",
+        "StoreNo": ,
+        "Tienda": "Outlet Espacio Urbano Antofagasta",
+        "Conexion": "PCLO4000015403O",
+        "Caja": "C2"
+    },
+    {
+        "Controlador": "",
+        "StoreNo": ,
+        "Tienda": "Outlet Espacio Urbano Antofagasta",
+        "Conexion": "PCLO4000015404O",
+        "Caja": "C3"
     }
+   
 ]
