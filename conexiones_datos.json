@@ -427,6 +427,20 @@
         "Caja": "C3"
     },
     {
+        "Controlador": "LV_ALTOCONDES",
+        "StoreNo": 12,
+        "Tienda": "Levis Alto Las Condes",
+        "Conexion": "PCLO4000012505O",
+        "Caja": "SELF1"
+    },
+    {
+        "Controlador": "LV_ALTOCONDES",
+        "StoreNo": 12,
+        "Tienda": "Levis Alto Las Condes",
+        "Conexion": "PCLO4000012506O",
+        "Caja": "SELF2"
+    }
+    {
         "Controlador": "LV_BUENAVENTURA",
         "StoreNo": 43,
         "Tienda": "Levis Outlet Buenaventura",
